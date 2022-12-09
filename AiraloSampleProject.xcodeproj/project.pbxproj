@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C1F691D12942C3CB00370BA5 /* AiraloSampleProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F691D02942C3CB00370BA5 /* AiraloSampleProjectApp.swift */; };
+		C1F691D32942C3CB00370BA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F691D22942C3CB00370BA5 /* ContentView.swift */; };
+		C1F691D52942C3CC00370BA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1F691D42942C3CC00370BA5 /* Assets.xcassets */; };
+		C1F691D82942C3CC00370BA5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1F691D72942C3CC00370BA5 /* Preview Assets.xcassets */; };
+		C1F691E22942C3CC00370BA5 /* AiraloSampleProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F691E12942C3CC00370BA5 /* AiraloSampleProjectTests.swift */; };
+		C1F691EC2942C3CC00370BA5 /* AiraloSampleProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F691EB2942C3CC00370BA5 /* AiraloSampleProjectUITests.swift */; };
+		C1F691EE2942C3CC00370BA5 /* AiraloSampleProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F691ED2942C3CC00370BA5 /* AiraloSampleProjectUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C1F691DE2942C3CC00370BA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1F691C52942C3CB00370BA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1F691CC2942C3CB00370BA5;
+			remoteInfo = AiraloSampleProject;
+		};
+		C1F691E82942C3CC00370BA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1F691C52942C3CB00370BA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1F691CC2942C3CB00370BA5;
+			remoteInfo = AiraloSampleProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C1F691CD2942C3CB00370BA5 /* AiraloSampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiraloSampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1F691D02942C3CB00370BA5 /* AiraloSampleProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiraloSampleProjectApp.swift; sourceTree = "<group>"; };
+		C1F691D22942C3CB00370BA5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C1F691D42942C3CC00370BA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C1F691D72942C3CC00370BA5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C1F691DD2942C3CC00370BA5 /* AiraloSampleProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AiraloSampleProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1F691E12942C3CC00370BA5 /* AiraloSampleProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiraloSampleProjectTests.swift; sourceTree = "<group>"; };
+		C1F691E72942C3CC00370BA5 /* AiraloSampleProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AiraloSampleProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1F691EB2942C3CC00370BA5 /* AiraloSampleProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiraloSampleProjectUITests.swift; sourceTree = "<group>"; };
+		C1F691ED2942C3CC00370BA5 /* AiraloSampleProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiraloSampleProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C1F691CA2942C3CB00370BA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1F691DA2942C3CC00370BA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1F691E42942C3CC00370BA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C1F691C42942C3CB00370BA5 = {
+			isa = PBXGroup;
+			children = (
+				C1F691CF2942C3CB00370BA5 /* AiraloSampleProject */,
+				C1F691E02942C3CC00370BA5 /* AiraloSampleProjectTests */,
+				C1F691EA2942C3CC00370BA5 /* AiraloSampleProjectUITests */,
+				C1F691CE2942C3CB00370BA5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C1F691CE2942C3CB00370BA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1F691CD2942C3CB00370BA5 /* AiraloSampleProject.app */,
+				C1F691DD2942C3CC00370BA5 /* AiraloSampleProjectTests.xctest */,
+				C1F691E72942C3CC00370BA5 /* AiraloSampleProjectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1F691CF2942C3CB00370BA5 /* AiraloSampleProject */ = {
+			isa = PBXGroup;
+			children = (
+				C1F691D02942C3CB00370BA5 /* AiraloSampleProjectApp.swift */,
+				C1F691D22942C3CB00370BA5 /* ContentView.swift */,
+				C1F691D42942C3CC00370BA5 /* Assets.xcassets */,
+				C1F691D62942C3CC00370BA5 /* Preview Content */,
+			);
+			path = AiraloSampleProject;
+			sourceTree = "<group>";
+		};
+		C1F691D62942C3CC00370BA5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C1F691D72942C3CC00370BA5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C1F691E02942C3CC00370BA5 /* AiraloSampleProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				C1F691E12942C3CC00370BA5 /* AiraloSampleProjectTests.swift */,
+			);
+			path = AiraloSampleProjectTests;
+			sourceTree = "<group>";
+		};
+		C1F691EA2942C3CC00370BA5 /* AiraloSampleProjectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C1F691EB2942C3CC00370BA5 /* AiraloSampleProjectUITests.swift */,
+				C1F691ED2942C3CC00370BA5 /* AiraloSampleProjectUITestsLaunchTests.swift */,
+			);
+			path = AiraloSampleProjectUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C1F691CC2942C3CB00370BA5 /* AiraloSampleProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1F691F12942C3CC00370BA5 /* Build configuration list for PBXNativeTarget "AiraloSampleProject" */;
+			buildPhases = (
+				C1F691C92942C3CB00370BA5 /* Sources */,
+				C1F691CA2942C3CB00370BA5 /* Frameworks */,
+				C1F691CB2942C3CB00370BA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AiraloSampleProject;
+			productName = AiraloSampleProject;
+			productReference = C1F691CD2942C3CB00370BA5 /* AiraloSampleProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C1F691DC2942C3CC00370BA5 /* AiraloSampleProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1F691F42942C3CC00370BA5 /* Build configuration list for PBXNativeTarget "AiraloSampleProjectTests" */;
+			buildPhases = (
+				C1F691D92942C3CC00370BA5 /* Sources */,
+				C1F691DA2942C3CC00370BA5 /* Frameworks */,
+				C1F691DB2942C3CC00370BA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1F691DF2942C3CC00370BA5 /* PBXTargetDependency */,
+			);
+			name = AiraloSampleProjectTests;
+			productName = AiraloSampleProjectTests;
+			productReference = C1F691DD2942C3CC00370BA5 /* AiraloSampleProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C1F691E62942C3CC00370BA5 /* AiraloSampleProjectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1F691F72942C3CC00370BA5 /* Build configuration list for PBXNativeTarget "AiraloSampleProjectUITests" */;
+			buildPhases = (
+				C1F691E32942C3CC00370BA5 /* Sources */,
+				C1F691E42942C3CC00370BA5 /* Frameworks */,
+				C1F691E52942C3CC00370BA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1F691E92942C3CC00370BA5 /* PBXTargetDependency */,
+			);
+			name = AiraloSampleProjectUITests;
+			productName = AiraloSampleProjectUITests;
+			productReference = C1F691E72942C3CC00370BA5 /* AiraloSampleProjectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C1F691C52942C3CB00370BA5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					C1F691CC2942C3CB00370BA5 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					C1F691DC2942C3CC00370BA5 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = C1F691CC2942C3CB00370BA5;
+					};
+					C1F691E62942C3CC00370BA5 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = C1F691CC2942C3CB00370BA5;
+					};
+				};
+			};
+			buildConfigurationList = C1F691C82942C3CB00370BA5 /* Build configuration list for PBXProject "AiraloSampleProject" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C1F691C42942C3CB00370BA5;
+			productRefGroup = C1F691CE2942C3CB00370BA5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C1F691CC2942C3CB00370BA5 /* AiraloSampleProject */,
+				C1F691DC2942C3CC00370BA5 /* AiraloSampleProjectTests */,
+				C1F691E62942C3CC00370BA5 /* AiraloSampleProjectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C1F691CB2942C3CB00370BA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1F691D82942C3CC00370BA5 /* Preview Assets.xcassets in Resources */,
+				C1F691D52942C3CC00370BA5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1F691DB2942C3CC00370BA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1F691E52942C3CC00370BA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C1F691C92942C3CB00370BA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1F691D32942C3CB00370BA5 /* ContentView.swift in Sources */,
+				C1F691D12942C3CB00370BA5 /* AiraloSampleProjectApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1F691D92942C3CC00370BA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1F691E22942C3CC00370BA5 /* AiraloSampleProjectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1F691E32942C3CC00370BA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1F691EE2942C3CC00370BA5 /* AiraloSampleProjectUITestsLaunchTests.swift in Sources */,
+				C1F691EC2942C3CC00370BA5 /* AiraloSampleProjectUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C1F691DF2942C3CC00370BA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1F691CC2942C3CB00370BA5 /* AiraloSampleProject */;
+			targetProxy = C1F691DE2942C3CC00370BA5 /* PBXContainerItemProxy */;
+		};
+		C1F691E92942C3CC00370BA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1F691CC2942C3CB00370BA5 /* AiraloSampleProject */;
+			targetProxy = C1F691E82942C3CC00370BA5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C1F691EF2942C3CC00370BA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C1F691F02942C3CC00370BA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C1F691F22942C3CC00370BA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AiraloSampleProject/Preview Content\"";
+				DEVELOPMENT_TEAM = 22M385VSX9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olhahoncharuk.AiraloSampleProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C1F691F32942C3CC00370BA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AiraloSampleProject/Preview Content\"";
+				DEVELOPMENT_TEAM = 22M385VSX9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olhahoncharuk.AiraloSampleProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C1F691F52942C3CC00370BA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22M385VSX9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olhahoncharuk.AiraloSampleProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AiraloSampleProject.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AiraloSampleProject";
+			};
+			name = Debug;
+		};
+		C1F691F62942C3CC00370BA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22M385VSX9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olhahoncharuk.AiraloSampleProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AiraloSampleProject.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AiraloSampleProject";
+			};
+			name = Release;
+		};
+		C1F691F82942C3CC00370BA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22M385VSX9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olhahoncharuk.AiraloSampleProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AiraloSampleProject;
+			};
+			name = Debug;
+		};
+		C1F691F92942C3CC00370BA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22M385VSX9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olhahoncharuk.AiraloSampleProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AiraloSampleProject;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C1F691C82942C3CB00370BA5 /* Build configuration list for PBXProject "AiraloSampleProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1F691EF2942C3CC00370BA5 /* Debug */,
+				C1F691F02942C3CC00370BA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1F691F12942C3CC00370BA5 /* Build configuration list for PBXNativeTarget "AiraloSampleProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1F691F22942C3CC00370BA5 /* Debug */,
+				C1F691F32942C3CC00370BA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1F691F42942C3CC00370BA5 /* Build configuration list for PBXNativeTarget "AiraloSampleProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1F691F52942C3CC00370BA5 /* Debug */,
+				C1F691F62942C3CC00370BA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1F691F72942C3CC00370BA5 /* Build configuration list for PBXNativeTarget "AiraloSampleProjectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1F691F82942C3CC00370BA5 /* Debug */,
+				C1F691F92942C3CC00370BA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C1F691C52942C3CB00370BA5 /* Project object */;
+}
