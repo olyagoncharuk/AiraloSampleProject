@@ -30,7 +30,13 @@ final class TabBarButtonStyling: Styling {
     var backgroundColor = Color.clear
 }
 
+final class HelloStyling: FontStyling {
+    var color = Color(hex: "#4A4A4A")
+    var font = Font.custom("IBMPlexSans-Bold", size: 27)
+}
+
 class Style: ObservableObject {
     let tabBarButtonSelectedStyling = TabBarButtonSelectedStyling()
     let tabBarButtonStyling = TabBarButtonStyling()
+    let helloStyling = HelloStyling()
 }

@@ -33,3 +33,17 @@ extension Color {
         )
     }
 }
+
+extension Text {
+    func withFontColorStyle(_ style: FontStyling) -> some View {
+        self.foregroundColor(style.color)
+            .font(style.font)
+    }
+    
+    func withFontColorStyle(_ style: Styling, isSelected: Bool) -> some View {
+        self.foregroundColor(isSelected ? style.color : style.color.opacity(0.5))
+            .font(style.font)
+    }
+    
+}
+
