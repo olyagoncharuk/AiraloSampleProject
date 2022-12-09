@@ -28,6 +28,8 @@
 		C1BC84AE294304B6004BE287 /* IBMPlexSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1BC84A0294304B6004BE287 /* IBMPlexSans-LightItalic.ttf */; };
 		C1BC84AF294304B6004BE287 /* IBMPlexSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1BC84A1294304B6004BE287 /* IBMPlexSans-MediumItalic.ttf */; };
 		C1BC84B0294304B6004BE287 /* IBMPlexSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1BC84A2294304B6004BE287 /* IBMPlexSans-Medium.ttf */; };
+		C1BC84B3294308B8004BE287 /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC84B2294308B8004BE287 /* Styling.swift */; };
+		C1BC84B529430975004BE287 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC84B429430975004BE287 /* Extensions.swift */; };
 		C1F691D12942C3CB00370BA5 /* AiraloSampleProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F691D02942C3CB00370BA5 /* AiraloSampleProjectApp.swift */; };
 		C1F691D32942C3CB00370BA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F691D22942C3CB00370BA5 /* ContentView.swift */; };
 		C1F691D52942C3CC00370BA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1F691D42942C3CC00370BA5 /* Assets.xcassets */; };
@@ -77,6 +79,8 @@
 		C1BC84A1294304B6004BE287 /* IBMPlexSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-MediumItalic.ttf"; sourceTree = "<group>"; };
 		C1BC84A2294304B6004BE287 /* IBMPlexSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Medium.ttf"; sourceTree = "<group>"; };
 		C1BC84B1294305B7004BE287 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C1BC84B2294308B8004BE287 /* Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styling.swift; sourceTree = "<group>"; };
+		C1BC84B429430975004BE287 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C1F691CD2942C3CB00370BA5 /* AiraloSampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiraloSampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F691D02942C3CB00370BA5 /* AiraloSampleProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiraloSampleProjectApp.swift; sourceTree = "<group>"; };
 		C1F691D22942C3CB00370BA5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				C1BC849229430356004BE287 /* TabBarButton.swift */,
+				C1BC84B2294308B8004BE287 /* Styling.swift */,
+				C1BC84B429430975004BE287 /* Extensions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -376,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1BC84B3294308B8004BE287 /* Styling.swift in Sources */,
 				C1BC84892943029E004BE287 /* RegionalViewModel.swift in Sources */,
 				C1BC8490294302CC004BE287 /* GlobalView.swift in Sources */,
 				C1BC848629430279004BE287 /* LocalView.swift in Sources */,
@@ -384,6 +391,7 @@
 				C1BC849329430356004BE287 /* TabBarButton.swift in Sources */,
 				C1F691D32942C3CB00370BA5 /* ContentView.swift in Sources */,
 				C1BC848E294302C1004BE287 /* GlobalViewModel.swift in Sources */,
+				C1BC84B529430975004BE287 /* Extensions.swift in Sources */,
 				C1F691D12942C3CB00370BA5 /* AiraloSampleProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
