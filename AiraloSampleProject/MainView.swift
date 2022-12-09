@@ -13,6 +13,9 @@ struct MainView: View {
     
     let viewModel: MainViewModel
     let style = Style()
+    @State var selectedTabIndex: SimTab = SimTab.local
+
+    var tabs: [SimTab] = SimTab.allCases
     
     // MARK: - Body
     
@@ -21,7 +24,18 @@ struct MainView: View {
             VStack(alignment: .leading) {
                 Text("Hello")
                     .withFontColorStyle(style.helloStyling)
-                TopBarView()
+                TopBarView(selectedTabIndex: $selectedTabIndex,
+                           tabs: tabs)
+            }
+            VStack {
+                switch selectedTabIndex {
+                case .local:
+                    LocalView(viewModel: viewModel.localViewModel)
+                case .regional:
+                    RegionalView(viewModel: viewModel.regionalViewModel)
+                case .global:
+                    GlobalView(viewModel: viewModel.globalViewModel)
+                }
             }
             Spacer()
         }

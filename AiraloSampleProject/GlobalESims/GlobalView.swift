@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct GlobalView: View {
+    
+    // MARK: - Properties
+    
+    var viewModel: GlobalViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Global")
     }
 }
 
 struct GlobalView_Previews: PreviewProvider {
     static var previews: some View {
-        RegionalView()
+        GlobalView(viewModel: GlobalViewModel())
     }
 }

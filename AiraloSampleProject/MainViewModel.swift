@@ -9,4 +9,12 @@ import Foundation
 
 class MainViewModel {
     
+    // MARK: - Properties
+    
+    var localViewModel = LocalViewModel()
+    
+    var regionalViewModel = RegionalViewModel()
+    
+    var globalViewModel = GlobalViewModel()
+    
 }

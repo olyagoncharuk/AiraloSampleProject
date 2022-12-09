@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct LocalView: View {
+    
+    // MARK: - Properties
+    
+    var viewModel: LocalViewModel
+    
+    // MARK: - Body
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Local")
     }
 }
 
 struct LocalView_Previews: PreviewProvider {
     static var previews: some View {
-        LocalView()
+        LocalView(viewModel: LocalViewModel())
     }
 }

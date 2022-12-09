@@ -11,8 +11,9 @@ struct TopBarView: View {
     
     // MARK: - Properties
     
-    @State var selectedTabIndex: Int = 0
-    var tabs = SimTab.allCases
+    @Binding var selectedTabIndex: SimTab
+    
+    var tabs: [SimTab]
     
     // MARK: - Body
     
@@ -20,14 +21,14 @@ struct TopBarView: View {
         HStack {
             ForEach(tabs) { tab in
                 TabBarButton(text: tab.title,
-                             idx: tab.idx,
-                             isSelected: isSelectedTabIndex(tab.idx),
+                             idx: tab,
+                             isSelected: isSelectedTabIndex(tab),
                              tabIndex: $selectedTabIndex)
             }
         }
     }
     
-    func isSelectedTabIndex(_ tabIndex: Int) -> Binding<Bool> {
+    func isSelectedTabIndex(_ tabIndex: SimTab) -> Binding<Bool> {
         .init {
             tabIndex == selectedTabIndex
         } set: { _ in
@@ -38,7 +39,8 @@ struct TopBarView: View {
 
 struct TopBarView_Previews: PreviewProvider {
     static var previews: some View {
-        TopBarView()
+        TopBarView(selectedTabIndex: .constant(SimTab.local),
+                   tabs: SimTab.allCases)
     }
 }
 

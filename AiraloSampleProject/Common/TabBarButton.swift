@@ -12,10 +12,10 @@ struct TabBarButton: View {
     // MARK: - Properties
     
     let text: String
-    let idx: Int
+    let idx: SimTab
     @Binding var isSelected: Bool
     
-    @Binding var tabIndex: Int
+    @Binding var tabIndex: SimTab
     
     @EnvironmentObject var style: Style
     
@@ -34,9 +34,9 @@ struct TabBarButton: View {
 struct TabBarButton_Previews: PreviewProvider {
     static var previews: some View {
         TabBarButton(text: "Local eSIMs",
-                     idx: 0,
+                     idx: SimTab.local,
                      isSelected: .constant(true),
-                     tabIndex: .constant(0)).environmentObject(Style())
+                     tabIndex: .constant(SimTab.local)).environmentObject(Style())
     }
 }
 
