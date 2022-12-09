@@ -26,7 +26,9 @@ struct MainView: View {
                     .withFontColorStyle(style.helloStyling)
                 TopBarView(selectedTabIndex: $selectedTabIndex,
                            tabs: tabs)
+                
             }
+            
             VStack {
                 switch selectedTabIndex {
                 case .local:
@@ -39,8 +41,9 @@ struct MainView: View {
             }
             Spacer()
         }
+        .frame(width: .infinity)
         .environmentObject(style)
-        .padding()
+        
     }
 }
 

@@ -32,6 +32,7 @@
 		C1BC84B529430975004BE287 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC84B429430975004BE287 /* Extensions.swift */; };
 		C1BC84B729430BED004BE287 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC84B629430BED004BE287 /* MainViewModel.swift */; };
 		C1BC84B929431754004BE287 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC84B829431754004BE287 /* TopBarView.swift */; };
+		C1BC84BB29434045004BE287 /* ListRowBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC84BA29434045004BE287 /* ListRowBackground.swift */; };
 		C1F691D12942C3CB00370BA5 /* AiraloSampleProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F691D02942C3CB00370BA5 /* AiraloSampleProjectApp.swift */; };
 		C1F691D32942C3CB00370BA5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F691D22942C3CB00370BA5 /* MainView.swift */; };
 		C1F691D52942C3CC00370BA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1F691D42942C3CC00370BA5 /* Assets.xcassets */; };
@@ -85,6 +86,7 @@
 		C1BC84B429430975004BE287 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C1BC84B629430BED004BE287 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		C1BC84B829431754004BE287 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
+		C1BC84BA29434045004BE287 /* ListRowBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowBackground.swift; sourceTree = "<group>"; };
 		C1F691CD2942C3CB00370BA5 /* AiraloSampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiraloSampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F691D02942C3CB00370BA5 /* AiraloSampleProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiraloSampleProjectApp.swift; sourceTree = "<group>"; };
 		C1F691D22942C3CB00370BA5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				C1BC849229430356004BE287 /* TabBarButton.swift */,
 				C1BC84B2294308B8004BE287 /* Styling.swift */,
 				C1BC84B429430975004BE287 /* Extensions.swift */,
+				C1BC84BA29434045004BE287 /* ListRowBackground.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				C1BC848E294302C1004BE287 /* GlobalViewModel.swift in Sources */,
 				C1BC84B529430975004BE287 /* Extensions.swift in Sources */,
 				C1F691D12942C3CB00370BA5 /* AiraloSampleProjectApp.swift in Sources */,
+				C1BC84BB29434045004BE287 /* ListRowBackground.swift in Sources */,
 				C1BC84B729430BED004BE287 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

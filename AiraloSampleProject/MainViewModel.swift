@@ -11,7 +11,7 @@ class MainViewModel {
     
     // MARK: - Properties
     
-    var localViewModel = LocalViewModel()
+    var localViewModel = LocalViewModel(items: preview_items)
     
     var regionalViewModel = RegionalViewModel()
     
