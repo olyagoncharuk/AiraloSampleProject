@@ -16,19 +16,21 @@ protocol BackgroundStyling {
     var backgroundColor: Color { get }
 }
 
-final class TabBarButtonSelectedStyle: FontStyling, BackgroundStyling {
+protocol Styling: FontStyling, BackgroundStyling {}
+
+final class TabBarButtonSelectedStyling: Styling {
     var color = Color(hex: "#4A4A4A")
     var font = Font.custom("IBMPlexSans-Medium", size: 13)
     var backgroundColor = Color(hex: "#EEEEEE")
 }
 
-final class TabBarButtonStyle: FontStyling, BackgroundStyling {
+final class TabBarButtonStyling: Styling {
     var color = Color(hex: "#8A8A8A")
     var font = Font.custom("IBMPlexSans-Medium", size: 13)
     var backgroundColor = Color.clear
 }
 
-class Styles: ObservableObject {
-    let tabBarButtonSelectedStyle = TabBarButtonSelectedStyle()
-    let tabBarButtonStyle = TabBarButtonStyle()
+class Style: ObservableObject {
+    let tabBarButtonSelectedStyling = TabBarButtonSelectedStyling()
+    let tabBarButtonStyling = TabBarButtonStyling()
 }

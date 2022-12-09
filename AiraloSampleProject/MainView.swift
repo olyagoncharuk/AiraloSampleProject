@@ -8,7 +8,13 @@
 import SwiftUI
 
 struct MainView: View {
-    var viewModel: MainViewModel
+    
+    // MARK: - Properties
+    
+    let viewModel: MainViewModel
+    let style = Style()
+    
+    // MARK: - Body
     
     var body: some View {
         VStack {
@@ -17,6 +23,7 @@ struct MainView: View {
                 .foregroundColor(.accentColor)
             Text("Hello, world!")
         }
+        .environmentObject(style)
         .padding()
     }
 }
