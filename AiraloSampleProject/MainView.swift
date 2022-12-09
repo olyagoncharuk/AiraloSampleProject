@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MainView.swift
 //  AiraloSampleProject
 //
 //  Created by zombie zyomka on 09.12.2022.
@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
+    var viewModel: MainViewModel
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -19,8 +21,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainView(viewModel: MainViewModel())
     }
 }

@@ -30,8 +30,9 @@
 		C1BC84B0294304B6004BE287 /* IBMPlexSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1BC84A2294304B6004BE287 /* IBMPlexSans-Medium.ttf */; };
 		C1BC84B3294308B8004BE287 /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC84B2294308B8004BE287 /* Styling.swift */; };
 		C1BC84B529430975004BE287 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC84B429430975004BE287 /* Extensions.swift */; };
+		C1BC84B729430BED004BE287 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC84B629430BED004BE287 /* MainViewModel.swift */; };
 		C1F691D12942C3CB00370BA5 /* AiraloSampleProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F691D02942C3CB00370BA5 /* AiraloSampleProjectApp.swift */; };
-		C1F691D32942C3CB00370BA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F691D22942C3CB00370BA5 /* ContentView.swift */; };
+		C1F691D32942C3CB00370BA5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F691D22942C3CB00370BA5 /* MainView.swift */; };
 		C1F691D52942C3CC00370BA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1F691D42942C3CC00370BA5 /* Assets.xcassets */; };
 		C1F691D82942C3CC00370BA5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1F691D72942C3CC00370BA5 /* Preview Assets.xcassets */; };
 		C1F691E22942C3CC00370BA5 /* AiraloSampleProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F691E12942C3CC00370BA5 /* AiraloSampleProjectTests.swift */; };
@@ -81,9 +82,10 @@
 		C1BC84B1294305B7004BE287 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C1BC84B2294308B8004BE287 /* Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styling.swift; sourceTree = "<group>"; };
 		C1BC84B429430975004BE287 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C1BC84B629430BED004BE287 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		C1F691CD2942C3CB00370BA5 /* AiraloSampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiraloSampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F691D02942C3CB00370BA5 /* AiraloSampleProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiraloSampleProjectApp.swift; sourceTree = "<group>"; };
-		C1F691D22942C3CB00370BA5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C1F691D22942C3CB00370BA5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C1F691D42942C3CC00370BA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1F691D72942C3CC00370BA5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C1F691DD2942C3CC00370BA5 /* AiraloSampleProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AiraloSampleProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,7 +204,8 @@
 			children = (
 				C1BC84B1294305B7004BE287 /* Info.plist */,
 				C1F691D02942C3CB00370BA5 /* AiraloSampleProjectApp.swift */,
-				C1F691D22942C3CB00370BA5 /* ContentView.swift */,
+				C1F691D22942C3CB00370BA5 /* MainView.swift */,
+				C1BC84B629430BED004BE287 /* MainViewModel.swift */,
 				C1BC848229430246004BE287 /* LocalESims */,
 				C1BC848729430285004BE287 /* RegionalESims */,
 				C1BC848C294302AE004BE287 /* GlobalESims */,
@@ -389,10 +392,11 @@
 				C1BC848429430271004BE287 /* LocalViewModel.swift in Sources */,
 				C1BC848B294302A9004BE287 /* RegionalView.swift in Sources */,
 				C1BC849329430356004BE287 /* TabBarButton.swift in Sources */,
-				C1F691D32942C3CB00370BA5 /* ContentView.swift in Sources */,
+				C1F691D32942C3CB00370BA5 /* MainView.swift in Sources */,
 				C1BC848E294302C1004BE287 /* GlobalViewModel.swift in Sources */,
 				C1BC84B529430975004BE287 /* Extensions.swift in Sources */,
 				C1F691D12942C3CB00370BA5 /* AiraloSampleProjectApp.swift in Sources */,
+				C1BC84B729430BED004BE287 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

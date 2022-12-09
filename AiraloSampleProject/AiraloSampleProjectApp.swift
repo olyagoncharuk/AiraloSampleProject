@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct AiraloSampleProjectApp: App {
+    let mainViewModel = MainViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView(viewModel: mainViewModel)
         }
     }
 }
