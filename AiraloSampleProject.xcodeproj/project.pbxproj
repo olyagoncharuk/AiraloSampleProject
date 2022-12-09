@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C1BC848429430271004BE287 /* LocalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC848329430271004BE287 /* LocalViewModel.swift */; };
+		C1BC848629430279004BE287 /* LocalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC848529430279004BE287 /* LocalView.swift */; };
+		C1BC84892943029E004BE287 /* RegionalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC84882943029E004BE287 /* RegionalViewModel.swift */; };
+		C1BC848B294302A9004BE287 /* RegionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC848A294302A9004BE287 /* RegionalView.swift */; };
+		C1BC848E294302C1004BE287 /* GlobalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC848D294302C1004BE287 /* GlobalViewModel.swift */; };
+		C1BC8490294302CC004BE287 /* GlobalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC848F294302CC004BE287 /* GlobalView.swift */; };
+		C1BC849329430356004BE287 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC849229430356004BE287 /* TabBarButton.swift */; };
+		C1BC84A3294304B6004BE287 /* IBMPlexSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1BC8495294304B6004BE287 /* IBMPlexSans-Thin.ttf */; };
+		C1BC84A4294304B6004BE287 /* IBMPlexSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1BC8496294304B6004BE287 /* IBMPlexSans-SemiBoldItalic.ttf */; };
+		C1BC84A5294304B6004BE287 /* IBMPlexSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1BC8497294304B6004BE287 /* IBMPlexSans-Light.ttf */; };
+		C1BC84A6294304B6004BE287 /* IBMPlexSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1BC8498294304B6004BE287 /* IBMPlexSans-BoldItalic.ttf */; };
+		C1BC84A7294304B6004BE287 /* IBMPlexSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1BC8499294304B6004BE287 /* IBMPlexSans-Bold.ttf */; };
+		C1BC84A8294304B6004BE287 /* IBMPlexSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1BC849A294304B6004BE287 /* IBMPlexSans-SemiBold.ttf */; };
+		C1BC84A9294304B6004BE287 /* IBMPlexSans-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1BC849B294304B6004BE287 /* IBMPlexSans-ThinItalic.ttf */; };
+		C1BC84AA294304B6004BE287 /* IBMPlexSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1BC849C294304B6004BE287 /* IBMPlexSans-Regular.ttf */; };
+		C1BC84AB294304B6004BE287 /* IBMPlexSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1BC849D294304B6004BE287 /* IBMPlexSans-ExtraLight.ttf */; };
+		C1BC84AC294304B6004BE287 /* IBMPlexSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1BC849E294304B6004BE287 /* IBMPlexSans-Italic.ttf */; };
+		C1BC84AD294304B6004BE287 /* IBMPlexSans-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1BC849F294304B6004BE287 /* IBMPlexSans-ExtraLightItalic.ttf */; };
+		C1BC84AE294304B6004BE287 /* IBMPlexSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1BC84A0294304B6004BE287 /* IBMPlexSans-LightItalic.ttf */; };
+		C1BC84AF294304B6004BE287 /* IBMPlexSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1BC84A1294304B6004BE287 /* IBMPlexSans-MediumItalic.ttf */; };
+		C1BC84B0294304B6004BE287 /* IBMPlexSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1BC84A2294304B6004BE287 /* IBMPlexSans-Medium.ttf */; };
 		C1F691D12942C3CB00370BA5 /* AiraloSampleProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F691D02942C3CB00370BA5 /* AiraloSampleProjectApp.swift */; };
 		C1F691D32942C3CB00370BA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F691D22942C3CB00370BA5 /* ContentView.swift */; };
 		C1F691D52942C3CC00370BA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1F691D42942C3CC00370BA5 /* Assets.xcassets */; };
@@ -34,6 +55,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C1BC848329430271004BE287 /* LocalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalViewModel.swift; sourceTree = "<group>"; };
+		C1BC848529430279004BE287 /* LocalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalView.swift; sourceTree = "<group>"; };
+		C1BC84882943029E004BE287 /* RegionalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionalViewModel.swift; sourceTree = "<group>"; };
+		C1BC848A294302A9004BE287 /* RegionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionalView.swift; sourceTree = "<group>"; };
+		C1BC848D294302C1004BE287 /* GlobalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalViewModel.swift; sourceTree = "<group>"; };
+		C1BC848F294302CC004BE287 /* GlobalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalView.swift; sourceTree = "<group>"; };
+		C1BC849229430356004BE287 /* TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
+		C1BC8495294304B6004BE287 /* IBMPlexSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Thin.ttf"; sourceTree = "<group>"; };
+		C1BC8496294304B6004BE287 /* IBMPlexSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		C1BC8497294304B6004BE287 /* IBMPlexSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Light.ttf"; sourceTree = "<group>"; };
+		C1BC8498294304B6004BE287 /* IBMPlexSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		C1BC8499294304B6004BE287 /* IBMPlexSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Bold.ttf"; sourceTree = "<group>"; };
+		C1BC849A294304B6004BE287 /* IBMPlexSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		C1BC849B294304B6004BE287 /* IBMPlexSans-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-ThinItalic.ttf"; sourceTree = "<group>"; };
+		C1BC849C294304B6004BE287 /* IBMPlexSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Regular.ttf"; sourceTree = "<group>"; };
+		C1BC849D294304B6004BE287 /* IBMPlexSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		C1BC849E294304B6004BE287 /* IBMPlexSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Italic.ttf"; sourceTree = "<group>"; };
+		C1BC849F294304B6004BE287 /* IBMPlexSans-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		C1BC84A0294304B6004BE287 /* IBMPlexSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		C1BC84A1294304B6004BE287 /* IBMPlexSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		C1BC84A2294304B6004BE287 /* IBMPlexSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Medium.ttf"; sourceTree = "<group>"; };
+		C1BC84B1294305B7004BE287 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C1F691CD2942C3CB00370BA5 /* AiraloSampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiraloSampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F691D02942C3CB00370BA5 /* AiraloSampleProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiraloSampleProjectApp.swift; sourceTree = "<group>"; };
 		C1F691D22942C3CB00370BA5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,10 +114,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C1BC848229430246004BE287 /* LocalESims */ = {
+			isa = PBXGroup;
+			children = (
+				C1BC848329430271004BE287 /* LocalViewModel.swift */,
+				C1BC848529430279004BE287 /* LocalView.swift */,
+			);
+			path = LocalESims;
+			sourceTree = "<group>";
+		};
+		C1BC848729430285004BE287 /* RegionalESims */ = {
+			isa = PBXGroup;
+			children = (
+				C1BC84882943029E004BE287 /* RegionalViewModel.swift */,
+				C1BC848A294302A9004BE287 /* RegionalView.swift */,
+			);
+			path = RegionalESims;
+			sourceTree = "<group>";
+		};
+		C1BC848C294302AE004BE287 /* GlobalESims */ = {
+			isa = PBXGroup;
+			children = (
+				C1BC848D294302C1004BE287 /* GlobalViewModel.swift */,
+				C1BC848F294302CC004BE287 /* GlobalView.swift */,
+			);
+			path = GlobalESims;
+			sourceTree = "<group>";
+		};
+		C1BC84912943032D004BE287 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C1BC849229430356004BE287 /* TabBarButton.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C1BC849429430486004BE287 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C1BC8499294304B6004BE287 /* IBMPlexSans-Bold.ttf */,
+				C1BC8498294304B6004BE287 /* IBMPlexSans-BoldItalic.ttf */,
+				C1BC849D294304B6004BE287 /* IBMPlexSans-ExtraLight.ttf */,
+				C1BC849F294304B6004BE287 /* IBMPlexSans-ExtraLightItalic.ttf */,
+				C1BC849E294304B6004BE287 /* IBMPlexSans-Italic.ttf */,
+				C1BC8497294304B6004BE287 /* IBMPlexSans-Light.ttf */,
+				C1BC84A0294304B6004BE287 /* IBMPlexSans-LightItalic.ttf */,
+				C1BC84A2294304B6004BE287 /* IBMPlexSans-Medium.ttf */,
+				C1BC84A1294304B6004BE287 /* IBMPlexSans-MediumItalic.ttf */,
+				C1BC849C294304B6004BE287 /* IBMPlexSans-Regular.ttf */,
+				C1BC849A294304B6004BE287 /* IBMPlexSans-SemiBold.ttf */,
+				C1BC8496294304B6004BE287 /* IBMPlexSans-SemiBoldItalic.ttf */,
+				C1BC8495294304B6004BE287 /* IBMPlexSans-Thin.ttf */,
+				C1BC849B294304B6004BE287 /* IBMPlexSans-ThinItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		C1F691C42942C3CB00370BA5 = {
 			isa = PBXGroup;
 			children = (
 				C1F691CF2942C3CB00370BA5 /* AiraloSampleProject */,
+				C1BC849429430486004BE287 /* Fonts */,
 				C1F691E02942C3CC00370BA5 /* AiraloSampleProjectTests */,
 				C1F691EA2942C3CC00370BA5 /* AiraloSampleProjectUITests */,
 				C1F691CE2942C3CB00370BA5 /* Products */,
@@ -94,8 +194,13 @@
 		C1F691CF2942C3CB00370BA5 /* AiraloSampleProject */ = {
 			isa = PBXGroup;
 			children = (
+				C1BC84B1294305B7004BE287 /* Info.plist */,
 				C1F691D02942C3CB00370BA5 /* AiraloSampleProjectApp.swift */,
 				C1F691D22942C3CB00370BA5 /* ContentView.swift */,
+				C1BC848229430246004BE287 /* LocalESims */,
+				C1BC848729430285004BE287 /* RegionalESims */,
+				C1BC848C294302AE004BE287 /* GlobalESims */,
+				C1BC84912943032D004BE287 /* Common */,
 				C1F691D42942C3CC00370BA5 /* Assets.xcassets */,
 				C1F691D62942C3CC00370BA5 /* Preview Content */,
 			);
@@ -231,7 +336,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1BC84A9294304B6004BE287 /* IBMPlexSans-ThinItalic.ttf in Resources */,
+				C1BC84A6294304B6004BE287 /* IBMPlexSans-BoldItalic.ttf in Resources */,
+				C1BC84AE294304B6004BE287 /* IBMPlexSans-LightItalic.ttf in Resources */,
+				C1BC84AD294304B6004BE287 /* IBMPlexSans-ExtraLightItalic.ttf in Resources */,
+				C1BC84AA294304B6004BE287 /* IBMPlexSans-Regular.ttf in Resources */,
+				C1BC84AC294304B6004BE287 /* IBMPlexSans-Italic.ttf in Resources */,
+				C1BC84B0294304B6004BE287 /* IBMPlexSans-Medium.ttf in Resources */,
+				C1BC84A5294304B6004BE287 /* IBMPlexSans-Light.ttf in Resources */,
+				C1BC84A7294304B6004BE287 /* IBMPlexSans-Bold.ttf in Resources */,
+				C1BC84AF294304B6004BE287 /* IBMPlexSans-MediumItalic.ttf in Resources */,
+				C1BC84AB294304B6004BE287 /* IBMPlexSans-ExtraLight.ttf in Resources */,
 				C1F691D82942C3CC00370BA5 /* Preview Assets.xcassets in Resources */,
+				C1BC84A3294304B6004BE287 /* IBMPlexSans-Thin.ttf in Resources */,
+				C1BC84A4294304B6004BE287 /* IBMPlexSans-SemiBoldItalic.ttf in Resources */,
+				C1BC84A8294304B6004BE287 /* IBMPlexSans-SemiBold.ttf in Resources */,
 				C1F691D52942C3CC00370BA5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,7 +376,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1BC84892943029E004BE287 /* RegionalViewModel.swift in Sources */,
+				C1BC8490294302CC004BE287 /* GlobalView.swift in Sources */,
+				C1BC848629430279004BE287 /* LocalView.swift in Sources */,
+				C1BC848429430271004BE287 /* LocalViewModel.swift in Sources */,
+				C1BC848B294302A9004BE287 /* RegionalView.swift in Sources */,
+				C1BC849329430356004BE287 /* TabBarButton.swift in Sources */,
 				C1F691D32942C3CB00370BA5 /* ContentView.swift in Sources */,
+				C1BC848E294302C1004BE287 /* GlobalViewModel.swift in Sources */,
 				C1F691D12942C3CB00370BA5 /* AiraloSampleProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +546,7 @@
 				DEVELOPMENT_TEAM = 22M385VSX9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AiraloSampleProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +576,7 @@
 				DEVELOPMENT_TEAM = 22M385VSX9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AiraloSampleProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
