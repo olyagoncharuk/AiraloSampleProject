@@ -7,6 +7,14 @@
 
 import Foundation
 
-protocol ImageDescriptable {
-    var image: String { get }
+protocol ESimDescribable: Identifiable, CustomStringConvertible {
+    var imageURL: URL? { get }
 }
+
+protocol ItemsOwner<Item> {
+    associatedtype Item
+    var items: [Item] { get set }
+}
+
+protocol ViewModel: ObservableObject, CustomStringConvertible, ItemsOwner {}
+

@@ -45,7 +45,7 @@ struct ESimRowView<Item>: View where Item: ESimDescribable {
                 .withFontColorStyle(style.esimRowTitleStyle)
                 .padding(.leading, 10)
             Spacer()
-            Image(systemName: "arrowtriangle.right.fill")
+            Image("arrow-right")
         }
         .listRowBackground(ListRowBackground())
         .listRowSeparator(.hidden)

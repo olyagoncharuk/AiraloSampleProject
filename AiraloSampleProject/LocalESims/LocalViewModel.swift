@@ -7,11 +7,19 @@
 
 import Foundation
 
-class LocalViewModel<Item>: ObservableObject where Item: CustomStringConvertible {
+class LocalViewModel<Item>: ViewModel {
+    
+    // MARK: - Properties
    
-    @Published var items: [Item] = [Item]()
+    @Published var items: [Item] = []
     
     var headerTitle: String = "Popular Countries"
+    
+    var description: String {
+        headerTitle
+    }
+    
+    // MARK: - Initialization
     
     convenience init(items: [Item]) {
         self.init()

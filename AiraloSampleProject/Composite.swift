@@ -10,7 +10,7 @@ import Foundation
 class Composite {
     
     var localESimsRemoteService = RemoteService<[ESim], LocalESimRequestData>()
-    var regionalESimsRemoteService = RemoteService<[ESim], LocalESimRequestData>()
+    var regionalESimsRemoteService = RemoteService<[ESim], RegionalESimRequestData>()
     
     private var models = [String: AnyObject]()
     

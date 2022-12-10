@@ -32,9 +32,9 @@ struct MainView: View {
             VStack {
                 switch selectedTabIndex {
                 case .local:
-                    LocalView(viewModel: viewModel.localViewModel)
+                    ESimListView(viewModel: viewModel.localViewModel)
                 case .regional:
-                    RegionalView(viewModel: viewModel.regionalViewModel)
+                    ESimListView(viewModel: viewModel.regionalViewModel)
                 case .global:
                     GlobalView(viewModel: viewModel.globalViewModel)
                 }
