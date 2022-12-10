@@ -13,11 +13,13 @@ struct ESimRowView<Item>: View where Item: ESimDescribable {
     
     var item: Item
     
+    @EnvironmentObject var style: Style
+    
     // MARK: - Body
     
     var body: some View {
         HStack {
-            AsyncImage(
+            CacheAsyncImage(
                 url: item.imageURL
             ) { phase in
                 switch phase {
@@ -40,7 +42,8 @@ struct ESimRowView<Item>: View where Item: ESimDescribable {
             }
 
             Text(item.description)
-                .padding(.leading)
+                .withFontColorStyle(style.esimRowTitleStyle)
+                .padding(.leading, 10)
             Spacer()
             Image(systemName: "arrowtriangle.right.fill")
         }

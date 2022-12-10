@@ -20,7 +20,7 @@ protocol Styling: FontStyling, BackgroundStyling {}
 
 final class TabBarButtonSelectedStyling: Styling {
     var color = Color(hex: "#4A4A4A")
-    var font = Font.custom("IBMPlexSans-Medium", size: 13)
+    var font = Font.custom("IBMPlexSans-Semibold", size: 13)
     var backgroundColor = Color(hex: "#EEEEEE")
 }
 
@@ -40,9 +40,15 @@ final class TabViewTitleStyle: FontStyling {
     var font = Font.custom("IBMPlexSans-Semibold", size: 19)
 }
 
+final class EsimRowTitleStyle: FontStyling {
+    var color = Color(hex: "#4A4A4A")
+    var font = Font.custom("IBMPlexSans-Semibold", size: 15)
+}
+
 class Style: ObservableObject {
     let tabBarButtonSelectedStyling = TabBarButtonSelectedStyling()
     let tabBarButtonStyling = TabBarButtonStyling()
     let helloStyling = HelloStyling()
     let tabViewTitleStyle = TabViewTitleStyle()
+    let esimRowTitleStyle = EsimRowTitleStyle()
 }

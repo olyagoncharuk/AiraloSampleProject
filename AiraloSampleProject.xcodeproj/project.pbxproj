@@ -14,6 +14,7 @@
 		C1B2114E294440CE0098AD9F /* Composite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2114D294440CE0098AD9F /* Composite.swift */; };
 		C1B2115029444F2F0098AD9F /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2114F29444F2F0098AD9F /* Defines.swift */; };
 		C1B211522944503A0098AD9F /* ESimRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B211512944503A0098AD9F /* ESimRowView.swift */; };
+		C1B2115429446AEE0098AD9F /* CacheAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2115329446AEE0098AD9F /* CacheAsyncImage.swift */; };
 		C1BC848429430271004BE287 /* LocalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC848329430271004BE287 /* LocalViewModel.swift */; };
 		C1BC848629430279004BE287 /* LocalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC848529430279004BE287 /* LocalView.swift */; };
 		C1BC84892943029E004BE287 /* RegionalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC84882943029E004BE287 /* RegionalViewModel.swift */; };
@@ -74,6 +75,7 @@
 		C1B2114D294440CE0098AD9F /* Composite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composite.swift; sourceTree = "<group>"; };
 		C1B2114F29444F2F0098AD9F /* Defines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defines.swift; sourceTree = "<group>"; };
 		C1B211512944503A0098AD9F /* ESimRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESimRowView.swift; sourceTree = "<group>"; };
+		C1B2115329446AEE0098AD9F /* CacheAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheAsyncImage.swift; sourceTree = "<group>"; };
 		C1BC848329430271004BE287 /* LocalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalViewModel.swift; sourceTree = "<group>"; };
 		C1BC848529430279004BE287 /* LocalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalView.swift; sourceTree = "<group>"; };
 		C1BC84882943029E004BE287 /* RegionalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionalViewModel.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				C1BC84B429430975004BE287 /* Extensions.swift */,
 				C1BC84BA29434045004BE287 /* ListRowBackground.swift */,
 				C1B2114F29444F2F0098AD9F /* Defines.swift */,
+				C1B2115329446AEE0098AD9F /* CacheAsyncImage.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				C1BC848E294302C1004BE287 /* GlobalViewModel.swift in Sources */,
 				C1B2114829443A6C0098AD9F /* RemoteService.swift in Sources */,
 				C1BC84B529430975004BE287 /* Extensions.swift in Sources */,
+				C1B2115429446AEE0098AD9F /* CacheAsyncImage.swift in Sources */,
 				C1F691D12942C3CB00370BA5 /* AiraloSampleProjectApp.swift in Sources */,
 				C1BC84BB29434045004BE287 /* ListRowBackground.swift in Sources */,
 				C1B2115029444F2F0098AD9F /* Defines.swift in Sources */,

@@ -14,13 +14,13 @@ struct ListRowBackground: View {
             .foregroundColor(.white.opacity(0.95))
             .padding(
                 EdgeInsets(
-                    top: 8,
+                    top: 6,
                     leading: 16,
-                    bottom: 8,
+                    bottom: 6,
                     trailing: 16
                 )
             )
-            .shadow(radius: 10)
+            .shadow(color: .black.opacity(0.2), radius: 10)
     }
 }
 struct ListRowBackground_Previews: PreviewProvider {
