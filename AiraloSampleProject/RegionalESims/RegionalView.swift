@@ -7,11 +7,12 @@
 
 import SwiftUI
 
-struct RegionalView: View {
+struct RegionalView<Item>: View where Item: CustomStringConvertible,
+                                             Item: Identifiable{
     
     // MARK: - Properties
     
-    var viewModel: RegionalViewModel
+    var viewModel: RegionalViewModel<Item>
     
     var body: some View {
         Text("Regional")
@@ -20,6 +21,6 @@ struct RegionalView: View {
 
 struct RegionalView_Previews: PreviewProvider {
     static var previews: some View {
-        RegionalView(viewModel: RegionalViewModel())
+        RegionalView(viewModel: RegionalViewModel(items: preview_items))
     }
 }

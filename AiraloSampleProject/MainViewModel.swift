@@ -11,9 +11,23 @@ class MainViewModel {
     
     // MARK: - Properties
     
-    var localViewModel = LocalViewModel(items: preview_items)
+    var composite: Composite
     
-    var regionalViewModel = RegionalViewModel()
+    // MARK: - Initialization
+    
+    init(composite: Composite) {
+        self.composite = composite
+    }
+    
+    // MARK: - Public Interface
+    
+    var localViewModel: LocalViewModel<ESim> {
+        composite.localViewModel()
+    }
+    
+    var regionalViewModel: RegionalViewModel<ESim> {
+        composite.regionalViewModel()
+    }
     
     var globalViewModel = GlobalViewModel()
     

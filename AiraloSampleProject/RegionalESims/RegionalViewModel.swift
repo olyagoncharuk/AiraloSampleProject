@@ -7,6 +7,18 @@
 
 import Foundation
 
-class RegionalViewModel {
+class RegionalViewModel<Item>: ObservableObject where Item: CustomStringConvertible {
     
+    // MARK: - Properties
+    
+    @Published var items: [Item] = [Item]()
+    
+    var headerTitle: String = "Popular Countries"
+    
+    // MARK: - Initialization
+    
+    convenience init(items: [Item]) {
+        self.init()
+        self.items = items
+    }
 }

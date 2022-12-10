@@ -13,7 +13,8 @@ class LocalViewModel<Item>: ObservableObject where Item: CustomStringConvertible
     
     var headerTitle: String = "Popular Countries"
     
-    init(items: [Item]) {
+    convenience init(items: [Item]) {
+        self.init()
         self.items = items
     }
 }

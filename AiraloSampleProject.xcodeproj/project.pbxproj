@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C1B2114629443A4B0098AD9F /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2114529443A4B0098AD9F /* HttpMethod.swift */; };
+		C1B2114829443A6C0098AD9F /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2114729443A6C0098AD9F /* RemoteService.swift */; };
+		C1B2114A29443AA90098AD9F /* ESim.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2114929443AA90098AD9F /* ESim.swift */; };
+		C1B2114C29443BE20098AD9F /* ESimImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2114B29443BE20098AD9F /* ESimImage.swift */; };
+		C1B2114E294440CE0098AD9F /* Composite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2114D294440CE0098AD9F /* Composite.swift */; };
 		C1BC848429430271004BE287 /* LocalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC848329430271004BE287 /* LocalViewModel.swift */; };
 		C1BC848629430279004BE287 /* LocalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC848529430279004BE287 /* LocalView.swift */; };
 		C1BC84892943029E004BE287 /* RegionalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC84882943029E004BE287 /* RegionalViewModel.swift */; };
@@ -60,6 +65,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C1B2114529443A4B0098AD9F /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		C1B2114729443A6C0098AD9F /* RemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteService.swift; sourceTree = "<group>"; };
+		C1B2114929443AA90098AD9F /* ESim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESim.swift; sourceTree = "<group>"; };
+		C1B2114B29443BE20098AD9F /* ESimImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESimImage.swift; sourceTree = "<group>"; };
+		C1B2114D294440CE0098AD9F /* Composite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composite.swift; sourceTree = "<group>"; };
 		C1BC848329430271004BE287 /* LocalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalViewModel.swift; sourceTree = "<group>"; };
 		C1BC848529430279004BE287 /* LocalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalView.swift; sourceTree = "<group>"; };
 		C1BC84882943029E004BE287 /* RegionalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionalViewModel.swift; sourceTree = "<group>"; };
@@ -124,11 +134,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C1B2114429443A320098AD9F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C1B2114529443A4B0098AD9F /* HttpMethod.swift */,
+				C1B2114729443A6C0098AD9F /* RemoteService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		C1BC848229430246004BE287 /* LocalESims */ = {
 			isa = PBXGroup;
 			children = (
 				C1BC848329430271004BE287 /* LocalViewModel.swift */,
 				C1BC848529430279004BE287 /* LocalView.swift */,
+				C1B2114929443AA90098AD9F /* ESim.swift */,
+				C1B2114B29443BE20098AD9F /* ESimImage.swift */,
 			);
 			path = LocalESims;
 			sourceTree = "<group>";
@@ -210,12 +231,14 @@
 			children = (
 				C1BC84B1294305B7004BE287 /* Info.plist */,
 				C1F691D02942C3CB00370BA5 /* AiraloSampleProjectApp.swift */,
+				C1B2114D294440CE0098AD9F /* Composite.swift */,
 				C1F691D22942C3CB00370BA5 /* MainView.swift */,
 				C1BC84B629430BED004BE287 /* MainViewModel.swift */,
 				C1BC848229430246004BE287 /* LocalESims */,
 				C1BC848729430285004BE287 /* RegionalESims */,
 				C1BC848C294302AE004BE287 /* GlobalESims */,
 				C1BC84912943032D004BE287 /* Common */,
+				C1B2114429443A320098AD9F /* Networking */,
 				C1F691D42942C3CC00370BA5 /* Assets.xcassets */,
 				C1F691D62942C3CC00370BA5 /* Preview Content */,
 			);
@@ -396,11 +419,16 @@
 				C1BC8490294302CC004BE287 /* GlobalView.swift in Sources */,
 				C1BC848629430279004BE287 /* LocalView.swift in Sources */,
 				C1BC848429430271004BE287 /* LocalViewModel.swift in Sources */,
+				C1B2114C29443BE20098AD9F /* ESimImage.swift in Sources */,
+				C1B2114E294440CE0098AD9F /* Composite.swift in Sources */,
 				C1BC848B294302A9004BE287 /* RegionalView.swift in Sources */,
 				C1BC849329430356004BE287 /* TabBarButton.swift in Sources */,
+				C1B2114A29443AA90098AD9F /* ESim.swift in Sources */,
+				C1B2114629443A4B0098AD9F /* HttpMethod.swift in Sources */,
 				C1F691D32942C3CB00370BA5 /* MainView.swift in Sources */,
 				C1BC84B929431754004BE287 /* TopBarView.swift in Sources */,
 				C1BC848E294302C1004BE287 /* GlobalViewModel.swift in Sources */,
+				C1B2114829443A6C0098AD9F /* RemoteService.swift in Sources */,
 				C1BC84B529430975004BE287 /* Extensions.swift in Sources */,
 				C1F691D12942C3CB00370BA5 /* AiraloSampleProjectApp.swift in Sources */,
 				C1BC84BB29434045004BE287 /* ListRowBackground.swift in Sources */,
