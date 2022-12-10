@@ -17,16 +17,28 @@ struct ESimRowView<Item>: View where Item: ESimDescribable {
     
     var body: some View {
         HStack {
-            AsyncImage(url: item.imageURL) { image in
-                image
-                    .resizable()
-                    .frame(width: 37, height: 28)
-                    .aspectRatio(contentMode: .fit)
-                    
-            } placeholder: {
-                Image(systemName: "flag")
-                    .tint(.gray.opacity(0.2))
+            AsyncImage(
+                url: item.imageURL
+            ) { phase in
+                switch phase {
+                case .success(let image):
+                    HStack {
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 37, height: 28)
+                            
+                    }
+                case .failure(let error):
+                    ErrorView(error: error)
+                case .empty:
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle(tint: .gray.opacity(0.3)))
+                @unknown default:
+                    Image(systemName: "questionmark")
+                }
             }
+
             Text(item.description)
                 .padding(.leading)
             Spacer()
@@ -44,6 +56,13 @@ struct ESimRowView_Previews: PreviewProvider {
         ESimRowView<Item_Preview>(
             item: Item_Preview(name: "Ukraine")
         )
+    }
+}
+
+struct ErrorView: View {
+    let error: Error
+    var body: some View {
+        Image(systemName: "exclamationmark.triangle")
     }
 }
 
