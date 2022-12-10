@@ -15,25 +15,25 @@ class Composite {
     private var models = [String: AnyObject]()
     
     func localViewModel() -> LocalViewModel<ESim> {
-        if let model = models["Local"] as? LocalViewModel<ESim> { return model }
+        if let model = models[SimTab.local.title] as? LocalViewModel<ESim> { return model }
         else {
             let viewModel = LocalViewModel<ESim>()
             localESimsRemoteService.getItems { esims in
                 viewModel.items = esims
             }
-            models["Local"] = viewModel
+            models[SimTab.local.title] = viewModel
             return viewModel
         }
     }
     
     func regionalViewModel() -> RegionalViewModel<ESim> {
-        if let model = models["Regional"] as? RegionalViewModel<ESim> { return model }
+        if let model = models[SimTab.regional.title] as? RegionalViewModel<ESim> { return model }
         else {
             let viewModel = RegionalViewModel<ESim>()
             regionalESimsRemoteService.getItems { esims in
                 viewModel.items = esims
             }
-            models["Local"] = viewModel
+            models[SimTab.regional.title] = viewModel
             return viewModel
         }
     }

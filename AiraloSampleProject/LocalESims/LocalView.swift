@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-struct LocalView<Item>: View where Item: CustomStringConvertible,
-                                   Item: Identifiable {
+struct LocalView<Item>: View where Item: ESimDescribable {
     
     // MARK: - Properties
     
@@ -23,16 +22,7 @@ struct LocalView<Item>: View where Item: CustomStringConvertible,
             List {
                 Section {
                     ForEach(viewModel.items) { item in
-                        HStack {
-                            Image(systemName: "flag.fill")
-                            Text(item.description)
-                            Spacer()
-                            Image(systemName: "arrowtriangle.right.fill")
-                        }
-                        .listRowBackground(ListRowBackground())
-                        .listRowSeparator(.hidden)
-                        .frame(height: 55)
-                        .padding(.horizontal)
+                        ESimRowView(item: item)
                     }
                 } header: {
                     Text(viewModel.headerTitle)
@@ -53,12 +43,36 @@ struct LocalView_Previews: PreviewProvider {
     }
 }
 
-var preview_items = ["Argentina", "Canada", "China"]
+var preview_items = [Item_Preview(name: "Argentina"),
+                     Item_Preview(name: "Canada"),
+                     Item_Preview(name: "China")]
 
 extension String: Identifiable {
     public var id: String {
         self
     }
 }
+
+class Item_Preview: ESimDescribable {
+    
+    var name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+    
+    var id: String {
+        name
+    }
+    
+    var description: String {
+        name
+    }
+    
+    var imageURL: URL? {
+        nil
+    }
+}
+
 
 

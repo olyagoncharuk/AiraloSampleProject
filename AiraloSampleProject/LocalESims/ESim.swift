@@ -16,7 +16,11 @@ struct ESim: Decodable {
     var image: ESimImage
 }
 
-extension ESim: Identifiable, CustomStringConvertible {
+protocol ESimDescribable: Identifiable, CustomStringConvertible {
+    var imageURL: URL? { get }
+}
+
+extension ESim: ESimDescribable {
     
     var id: String {
         slug
@@ -24,6 +28,10 @@ extension ESim: Identifiable, CustomStringConvertible {
     
     var description: String {
         title
+    }
+    
+    var imageURL: URL? {
+        URL(string: image.url)
     }
 }
 

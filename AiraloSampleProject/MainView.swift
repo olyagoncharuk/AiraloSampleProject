@@ -41,7 +41,6 @@ struct MainView: View {
             }
             Spacer()
         }
-        .frame(width: .infinity)
         .environmentObject(style)
         
     }

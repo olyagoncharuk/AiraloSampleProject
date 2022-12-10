@@ -11,7 +11,7 @@ struct ListRowBackground: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 6)
             .background(.clear)
-            .foregroundColor(.white)
+            .foregroundColor(.white.opacity(0.95))
             .padding(
                 EdgeInsets(
                     top: 8,

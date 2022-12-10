@@ -67,4 +67,5 @@ enum SimTab: Int, CaseIterable, Identifiable {
             return "Global eSIMs"
         }
     }
+    
 }
