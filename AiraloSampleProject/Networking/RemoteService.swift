@@ -15,23 +15,27 @@ public protocol ItemsProvider<T> {
 
 public protocol NetworkRequestable<Body> {
     associatedtype Body
-    static var urlStr: String { get }
-    static var httpMethod: HttpMethod { get }
-    static var headerFields: [String: String]? { get }
+    var urlStr: String { get }
+    var httpMethod: HttpMethod { get }
+    var headerFields: [String: String]? { get }
 }
 
 typealias RemoteServiceSuccessfulCompletion<T> = (T) -> Void
 
 
-public class RemoteService<T, R> where T: Decodable, R: NetworkRequestable {
+public class RemoteService<T, Requestable> where T: Decodable, Requestable: NetworkRequestable {
     
     // MARK: - Properties
+    
+    var requestValues: Requestable
     
     private var cancellables = [AnyCancellable]()
     
     // MARK: - Initialization
     
-    public init() {}
+    public init(requestValues: Requestable) {
+        self.requestValues = requestValues
+    }
     
 }
 
@@ -41,17 +45,17 @@ extension RemoteService: ItemsProvider {
     
     public func getItems(completion: @MainActor @escaping (T) -> Void) {
         
-        let url = URL(string: R.urlStr)!
+        let url = URL(string: requestValues.urlStr)!
         
         var request = URLRequest(url: url)
         
-        request.httpMethod = R.httpMethod.name
+        request.httpMethod = requestValues.httpMethod.name
         
-        R.headerFields?.forEach { keyValuePair in
+        requestValues.headerFields?.forEach { keyValuePair in
             request.setValue(keyValuePair.value, forHTTPHeaderField: keyValuePair.key)
         }
         
-        if let requestBody = R.httpMethod.requestBody {
+        if let requestBody = requestValues.httpMethod.requestBody {
             request.httpBody = requestBody
         }
         

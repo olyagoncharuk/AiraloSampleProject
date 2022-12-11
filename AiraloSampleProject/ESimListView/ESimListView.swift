@@ -11,7 +11,7 @@ struct ESimListView<Item, VM>: View where Item: ESimDescribable, VM: ViewModel, 
     
     // MARK: - Properties
     
-    @ObservedObject var viewModel: VM//LocalViewModel<Item>
+    @ObservedObject var viewModel: VM
     
     @EnvironmentObject var style: Style
     

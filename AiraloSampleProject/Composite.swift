@@ -9,9 +9,9 @@ import Foundation
 
 class Composite {
     
-    var localESimsRemoteService = RemoteService<[ESim], LocalESimRequestData>()
-    var regionalESimsRemoteService = RemoteService<[ESim], RegionalESimRequestData>()
-    var globalESimsRemoteService = RemoteService<Global, GlobalESimRequestData>()
+    var localESimsRemoteService = RemoteService<[ESim], LocalESimRequestData>(requestValues: LocalESimRequestData())
+    var regionalESimsRemoteService = RemoteService<[ESim], RegionalESimRequestData>(requestValues: RegionalESimRequestData())
+    var globalESimsRemoteService = RemoteService<Global, GlobalESimRequestData>(requestValues: GlobalESimRequestData())
     
     private var models = [String: AnyObject]()
     
