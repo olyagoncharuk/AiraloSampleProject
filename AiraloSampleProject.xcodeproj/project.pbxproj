@@ -19,9 +19,10 @@
 		C1B21160294489A50098AD9F /* ESim.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2115E294489A50098AD9F /* ESim.swift */; };
 		C1B2116229448B7E0098AD9F /* LocalRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2116129448B7E0098AD9F /* LocalRequestData.swift */; };
 		C1B2116429448B960098AD9F /* RegionRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2116329448B960098AD9F /* RegionRequestData.swift */; };
+		C1B211662944AFE00098AD9F /* GlobalRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B211652944AFE00098AD9F /* GlobalRequestData.swift */; };
+		C1B211682944DD820098AD9F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B211672944DD820098AD9F /* CardView.swift */; };
 		C1BC848429430271004BE287 /* LocalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC848329430271004BE287 /* LocalViewModel.swift */; };
 		C1BC84892943029E004BE287 /* RegionalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC84882943029E004BE287 /* RegionalViewModel.swift */; };
-		C1BC848B294302A9004BE287 /* RegionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC848A294302A9004BE287 /* RegionalView.swift */; };
 		C1BC848E294302C1004BE287 /* GlobalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC848D294302C1004BE287 /* GlobalViewModel.swift */; };
 		C1BC8490294302CC004BE287 /* GlobalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC848F294302CC004BE287 /* GlobalView.swift */; };
 		C1BC849329430356004BE287 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC849229430356004BE287 /* TabBarButton.swift */; };
@@ -83,9 +84,10 @@
 		C1B2115E294489A50098AD9F /* ESim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESim.swift; sourceTree = "<group>"; };
 		C1B2116129448B7E0098AD9F /* LocalRequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRequestData.swift; sourceTree = "<group>"; };
 		C1B2116329448B960098AD9F /* RegionRequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionRequestData.swift; sourceTree = "<group>"; };
+		C1B211652944AFE00098AD9F /* GlobalRequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalRequestData.swift; sourceTree = "<group>"; };
+		C1B211672944DD820098AD9F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C1BC848329430271004BE287 /* LocalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalViewModel.swift; sourceTree = "<group>"; };
 		C1BC84882943029E004BE287 /* RegionalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionalViewModel.swift; sourceTree = "<group>"; };
-		C1BC848A294302A9004BE287 /* RegionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionalView.swift; sourceTree = "<group>"; };
 		C1BC848D294302C1004BE287 /* GlobalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalViewModel.swift; sourceTree = "<group>"; };
 		C1BC848F294302CC004BE287 /* GlobalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalView.swift; sourceTree = "<group>"; };
 		C1BC849229430356004BE287 /* TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				C1B2115D294489A50098AD9F /* ESimImage.swift */,
 				C1B2116129448B7E0098AD9F /* LocalRequestData.swift */,
 				C1B2116329448B960098AD9F /* RegionRequestData.swift */,
+				C1B211652944AFE00098AD9F /* GlobalRequestData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				C1BC84882943029E004BE287 /* RegionalViewModel.swift */,
-				C1BC848A294302A9004BE287 /* RegionalView.swift */,
 			);
 			path = RegionalESims;
 			sourceTree = "<group>";
@@ -212,6 +214,7 @@
 				C1B2114F29444F2F0098AD9F /* Defines.swift */,
 				C1B2115329446AEE0098AD9F /* CacheAsyncImage.swift */,
 				C1B21155294486AB0098AD9F /* Item_Preview.swift */,
+				C1B211672944DD820098AD9F /* CardView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -452,10 +455,10 @@
 				C1BC84892943029E004BE287 /* RegionalViewModel.swift in Sources */,
 				C1BC8490294302CC004BE287 /* GlobalView.swift in Sources */,
 				C1BC848429430271004BE287 /* LocalViewModel.swift in Sources */,
+				C1B211662944AFE00098AD9F /* GlobalRequestData.swift in Sources */,
 				C1B2114E294440CE0098AD9F /* Composite.swift in Sources */,
 				C1B21156294486AB0098AD9F /* Item_Preview.swift in Sources */,
 				C1B2115A294489250098AD9F /* ESimListView.swift in Sources */,
-				C1BC848B294302A9004BE287 /* RegionalView.swift in Sources */,
 				C1BC849329430356004BE287 /* TabBarButton.swift in Sources */,
 				C1B2114629443A4B0098AD9F /* HttpMethod.swift in Sources */,
 				C1F691D32942C3CB00370BA5 /* MainView.swift in Sources */,
@@ -468,6 +471,7 @@
 				C1F691D12942C3CB00370BA5 /* AiraloSampleProjectApp.swift in Sources */,
 				C1B2116429448B960098AD9F /* RegionRequestData.swift in Sources */,
 				C1B21160294489A50098AD9F /* ESim.swift in Sources */,
+				C1B211682944DD820098AD9F /* CardView.swift in Sources */,
 				C1BC84BB29434045004BE287 /* ListRowBackground.swift in Sources */,
 				C1B2115029444F2F0098AD9F /* Defines.swift in Sources */,
 				C1BC84B729430BED004BE287 /* MainViewModel.swift in Sources */,

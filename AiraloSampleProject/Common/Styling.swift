@@ -45,10 +45,36 @@ final class EsimRowTitleStyle: FontStyling {
     var font = Font.custom("IBMPlexSans-Semibold", size: 15)
 }
 
+final class CardTitleStyle: FontStyling {
+    var color = Color(hex: "#FFFFFF")
+    var font = Font.custom("IBMPlexSans-Medium", size: 19)
+}
+
+final class CardSubtitleStyle: FontStyling {
+    var color = Color(hex: "#FFFFFF")
+    var font = Font.custom("IBMPlexSans-Regular", size: 13)
+}
+
+final class UppercaseStyle: FontStyling {
+    var color = Color(hex: "#FFFFFF")
+    var font = Font.custom("IBMPlexSans-Medium", size: 11)
+}
+
+final class ValueStyle: FontStyling {
+    var color = Color(hex: "#FFFFFF")
+    var font = Font.custom("IBMPlexSans-Medium", size: 17)
+}
+
+
+
 class Style: ObservableObject {
     let tabBarButtonSelectedStyling = TabBarButtonSelectedStyling()
     let tabBarButtonStyling = TabBarButtonStyling()
     let helloStyling = HelloStyling()
     let tabViewTitleStyle = TabViewTitleStyle()
     let esimRowTitleStyle = EsimRowTitleStyle()
+    let cardTitleStyle = CardTitleStyle()
+    let cardSubtitleStyle = CardSubtitleStyle()
+    let uppercaseStyle = UppercaseStyle()
+    let valueStyle = ValueStyle()
 }

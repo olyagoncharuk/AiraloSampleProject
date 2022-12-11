@@ -13,7 +13,7 @@ struct ESim: Decodable {
     
     var slug: String
     var title: String
-    var image: ESimImage
+    var image: RemoteImage
 }
 
 extension ESim: ESimDescribable {

@@ -11,6 +11,7 @@ class Composite {
     
     var localESimsRemoteService = RemoteService<[ESim], LocalESimRequestData>()
     var regionalESimsRemoteService = RemoteService<[ESim], RegionalESimRequestData>()
+    var globalESimsRemoteService = RemoteService<Global, GlobalESimRequestData>()
     
     private var models = [String: AnyObject]()
     
@@ -34,6 +35,18 @@ class Composite {
                 viewModel.items = esims
             }
             models[SimTab.regional.title] = viewModel
+            return viewModel
+        }
+    }
+    
+    func globalViewModel() -> GlobalViewModel {
+        if let model = models[SimTab.global.title] as? GlobalViewModel { return model }
+        else {
+            let viewModel = GlobalViewModel()
+            globalESimsRemoteService.getItems { global in
+                viewModel.packages = global.packages
+            }
+            models[SimTab.global.title] = viewModel
             return viewModel
         }
     }

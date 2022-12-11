@@ -29,6 +29,8 @@ class MainViewModel {
         composite.regionalViewModel()
     }
     
-    var globalViewModel = GlobalViewModel()
+    var globalViewModel: GlobalViewModel {
+        composite.globalViewModel()
+    }
     
 }

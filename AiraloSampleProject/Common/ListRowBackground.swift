@@ -15,9 +15,9 @@ struct ListRowBackground: View {
             .padding(
                 EdgeInsets(
                     top: 6,
-                    leading: 16,
+                    leading: 20,
                     bottom: 6,
-                    trailing: 16
+                    trailing: 20
                 )
             )
             .shadow(color: .black.opacity(0.2), radius: 10)
