@@ -5,12 +5,7 @@
 //  Created by zombie zyomka on 10.12.2022.
 //
 
-import Foundation
-
-protocol CountryModelProvider {
-    func countryViewModel(for countryId: String) -> PackagesViewModel
-}
-    
+import Foundation 
 
 class Composite {
     
@@ -26,11 +21,10 @@ class Composite {
         return RemoteService(requestValues: requestData)
     }
     
-    // should be region
-    //    private func countryRemoteService(for slug: String) -> CountryRequestData {
-    //        CountryRequestData(countryId: slug)
-    //    }
-    //
+    private func regionRemoteService(for regionId: String) -> RemoteService<PackagesList, RegionRequestData> {
+        let requestData = RegionRequestData(regionId: regionId)
+        return RemoteService(requestValues: requestData)
+    }
     
     
     func localViewModel() -> LocalViewModel<ESim> {
@@ -69,20 +63,17 @@ class Composite {
         }
     }
     
-}
-
-extension Composite: CountryModelProvider {
-    
     func countryViewModel(for countryId: String) -> PackagesViewModel {
-        if let model = models[countryId] as? PackagesViewModel { return model }
+        let modelKey = "countryKey_" + countryId
+        if let model = models[modelKey] as? PackagesViewModel { return model }
         else {
             let viewModel = PackagesViewModel()
             var remoteService: RemoteService<PackagesList, CountryRequestData>? = nil
-            if let service = remoteServices[countryId] as? RemoteService<PackagesList, CountryRequestData> {
+            if let service = remoteServices[modelKey] as? RemoteService<PackagesList, CountryRequestData> {
                 remoteService = service
             } else {
                 remoteService = countryRemoteService(for: countryId)
-                remoteServices[countryId] = remoteService
+                remoteServices[modelKey] = remoteService
             }
             
             if let remoteService {
@@ -90,7 +81,30 @@ extension Composite: CountryModelProvider {
                     viewModel.packages = packagesList.packages
                 }
             }
-            models[SimTab.global.title] = viewModel
+            models[modelKey] = viewModel
+            return viewModel
+        }
+    }
+    
+    func regionViewModel(for regionId: String) -> PackagesViewModel {
+        let modelKey = "regionKey_" + regionId
+        if let model = models[modelKey] as? PackagesViewModel { return model }
+        else {
+            let viewModel = PackagesViewModel()
+            var remoteService: RemoteService<PackagesList, RegionRequestData>? = nil
+            if let service = remoteServices[modelKey] as? RemoteService<PackagesList, RegionRequestData> {
+                remoteService = service
+            } else {
+                remoteService = regionRemoteService(for: regionId)
+                remoteServices[modelKey] = remoteService
+            }
+            
+            if let remoteService {
+                remoteService.getItems { packagesList in
+                    viewModel.packages = packagesList.packages
+                }
+            }
+            models[modelKey] = viewModel
             return viewModel
         }
     }

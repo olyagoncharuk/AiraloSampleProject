@@ -34,13 +34,16 @@ struct MainView: View {
                     switch selectedTabIndex {
                     case .local:
                         ESimListView(viewModel: viewModel.localViewModel) { countryId in
-#warning("TODO: here should be viewModel from Composite")
-                            PackagesView(viewModel: PackagesViewModel())
+                            PackagesView(
+                                viewModel: viewModel.packagesViewModel(
+                                    forCountryId: countryId)
+                            )
                         }
                     case .regional:
                         ESimListView(viewModel: viewModel.regionalViewModel) {
                             regionId in
-                            PackagesView(viewModel: PackagesViewModel())
+                            PackagesView(viewModel: viewModel.packagesViewModel(forRegionId: regionId)
+                            )
                         }
                     case .global:
                         PackagesView(viewModel: viewModel.globalViewModel)
@@ -48,9 +51,8 @@ struct MainView: View {
                 }
                 Spacer()
             }
-            .environmentObject(style)
-            
         }
+        .environmentObject(style)
     }
 }
 

@@ -11,7 +11,7 @@ class MainViewModel {
     
     // MARK: - Properties
     
-    var composite: Composite
+    unowned var composite: Composite
     
     // MARK: - Initialization
     
@@ -31,6 +31,14 @@ class MainViewModel {
     
     var globalViewModel: PackagesViewModel {
         composite.globalViewModel()
+    }
+    
+    func packagesViewModel(forCountryId countryId: String) -> PackagesViewModel {
+        composite.countryViewModel(for: countryId)
+    }
+    
+    func packagesViewModel(forRegionId regionId: String) -> PackagesViewModel {
+        composite.regionViewModel(for: regionId)
     }
     
 }

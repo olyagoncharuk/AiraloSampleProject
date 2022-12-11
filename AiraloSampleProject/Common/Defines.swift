@@ -9,6 +9,7 @@ import Foundation
 
 protocol ESimDescribable: Identifiable, CustomStringConvertible {
     var imageURL: URL? { get }
+    var slug: String { get }
 }
 
 protocol ItemsOwner<Item> {

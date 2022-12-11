@@ -7,13 +7,9 @@
 
 import Foundation
 
-
-
 class LocalViewModel<Item>: ViewModel {
     
     // MARK: - Properties
-    
-    var countryModelProvider: (any CountryModelProvider)?
    
     @Published var items: [Item] = []
     

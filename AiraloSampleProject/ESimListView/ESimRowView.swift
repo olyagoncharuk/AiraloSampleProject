@@ -54,7 +54,7 @@ struct ESimRowView<Item>: View where Item: ESimDescribable {
 struct ESimRowView_Previews: PreviewProvider {
     static var previews: some View {
         ESimRowView<Item_Preview>(
-            item: Item_Preview(name: "Ukraine")
+            item: Item_Preview(name: "Ukraine", slug: "ukraine")
         )
         .environmentObject(Style())
     }

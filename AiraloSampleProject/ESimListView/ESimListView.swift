@@ -25,7 +25,7 @@ struct ESimListView<Item, VM, ChildView: View>: View where Item: ESimDescribable
                 List {
                     Section {
                         ForEach(viewModel.items) { item in
-                                NavigationLink(destination: builder(item.description)) {
+                                NavigationLink(destination: builder(item.slug)) {
                                     ESimRowView(item: item)
                                 }
                                 .listRowBackground(ListRowBackground())

@@ -9,10 +9,10 @@ import SwiftUI
 
 @main
 struct AiraloSampleProjectApp: App {
-    let mainViewModel = MainViewModel(composite: Composite())
+    let composite = Composite()
     var body: some Scene {
         WindowGroup {
-            MainView(viewModel: mainViewModel)
+            MainView(viewModel: MainViewModel(composite: composite))
         }
     }
 }
