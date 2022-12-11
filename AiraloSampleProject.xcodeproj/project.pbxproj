@@ -47,6 +47,7 @@
 		C1BC84BB29434045004BE287 /* ListRowBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC84BA29434045004BE287 /* ListRowBackground.swift */; };
 		C1C23AF92945A25100E391F8 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C23AF82945A25100E391F8 /* CardViewModel.swift */; };
 		C1C23AFB2945CB9A00E391F8 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C23AFA2945CB9A00E391F8 /* Package.swift */; };
+		C1C23AFD2945DA7600E391F8 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C23AFC2945DA7600E391F8 /* Country.swift */; };
 		C1F691D12942C3CB00370BA5 /* AiraloSampleProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F691D02942C3CB00370BA5 /* AiraloSampleProjectApp.swift */; };
 		C1F691D32942C3CB00370BA5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F691D22942C3CB00370BA5 /* MainView.swift */; };
 		C1F691D52942C3CC00370BA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1F691D42942C3CC00370BA5 /* Assets.xcassets */; };
@@ -115,6 +116,7 @@
 		C1BC84BA29434045004BE287 /* ListRowBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowBackground.swift; sourceTree = "<group>"; };
 		C1C23AF82945A25100E391F8 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		C1C23AFA2945CB9A00E391F8 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		C1C23AFC2945DA7600E391F8 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		C1F691CD2942C3CB00370BA5 /* AiraloSampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiraloSampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F691D02942C3CB00370BA5 /* AiraloSampleProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiraloSampleProjectApp.swift; sourceTree = "<group>"; };
 		C1F691D22942C3CB00370BA5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				C1B2116329448B960098AD9F /* RegionRequestData.swift */,
 				C1B211652944AFE00098AD9F /* GlobalRequestData.swift */,
 				C1C23AFA2945CB9A00E391F8 /* Package.swift */,
+				C1C23AFC2945DA7600E391F8 /* Country.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				C1B2116229448B7E0098AD9F /* LocalRequestData.swift in Sources */,
 				C1B2115429446AEE0098AD9F /* CacheAsyncImage.swift in Sources */,
 				C1F691D12942C3CB00370BA5 /* AiraloSampleProjectApp.swift in Sources */,
+				C1C23AFD2945DA7600E391F8 /* Country.swift in Sources */,
 				C1B2116429448B960098AD9F /* RegionRequestData.swift in Sources */,
 				C1B21160294489A50098AD9F /* ESim.swift in Sources */,
 				C1B211682944DD820098AD9F /* CardView.swift in Sources */,

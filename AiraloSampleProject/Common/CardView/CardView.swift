@@ -25,6 +25,7 @@ struct CardView: View {
                         title: viewModel.title,
                         subTitle: viewModel.subtitle)
                     ValueRowDivider()
+                        .padding(.top, 14)
                     ValueRow(
                         imageName: "arrows-up-down",
                         title: "DATA",

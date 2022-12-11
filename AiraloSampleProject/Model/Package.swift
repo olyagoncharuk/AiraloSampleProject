@@ -15,21 +15,30 @@ struct Package:  Identifiable {
     var price: Double
     fileprivate var opperator: Operator
     
+    private enum CodingKeys : String, CodingKey {
+        case id, data, validity, price, opperator = "operator", image
+    }
+    
     var title: String {
         opperator.title
     }
     
     var subTitle: String {
-        "33 Countries"//"\(opperator.countries.count)"
+        "\(opperator.countries.count) Countries"
+    }
+    
+    var color1: String {
+        opperator.gradient_start
+    }
+    
+    var color2: String {
+        opperator.gradient_end
     }
     
     var imageURL: URL {
         URL(string: opperator.image.url)!
     }
     
-    private enum CodingKeys : String, CodingKey {
-        case id, data, validity, price, opperator = "operator", image
-    }
 }
 
 extension Package: Decodable {
@@ -43,12 +52,7 @@ extension Package: Decodable {
         self.opperator = try container.decode(Operator.self, forKey: .opperator)
     }
     
-    var color1: String {
-        opperator.gradient_start
-    }
-    var color2: String {
-        opperator.gradient_end
-    }
+    // MARK: - Preview
     
     static func package_preview(id: Int) -> Package {
         Package(
@@ -62,17 +66,26 @@ extension Package: Decodable {
 }
 
 fileprivate struct Operator: Decodable {
+    
+    // MARK: - Properties
+    
     var title: String
     var gradient_start: String
     var gradient_end: String
     var image: RemoteImage
+    var countries: [Country]
+    
+    // MARK: - Preview
     
     static var operator_preview: Operator {
         Operator(
             title: "Discover Global O",
             gradient_start: "#07053F",
             gradient_end: "#0988A3",
-            image: RemoteImage.image_preview
+            image: RemoteImage.image_preview,
+            countries: [Country.country_preview(for: 0),
+                        Country.country_preview(for: 1)
+                       ]
         )
     }
 }
