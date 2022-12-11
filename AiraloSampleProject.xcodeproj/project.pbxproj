@@ -45,6 +45,7 @@
 		C1BC84B729430BED004BE287 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC84B629430BED004BE287 /* MainViewModel.swift */; };
 		C1BC84B929431754004BE287 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC84B829431754004BE287 /* TopBarView.swift */; };
 		C1BC84BB29434045004BE287 /* ListRowBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC84BA29434045004BE287 /* ListRowBackground.swift */; };
+		C1C23AF92945A25100E391F8 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C23AF82945A25100E391F8 /* CardViewModel.swift */; };
 		C1F691D12942C3CB00370BA5 /* AiraloSampleProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F691D02942C3CB00370BA5 /* AiraloSampleProjectApp.swift */; };
 		C1F691D32942C3CB00370BA5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F691D22942C3CB00370BA5 /* MainView.swift */; };
 		C1F691D52942C3CC00370BA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1F691D42942C3CC00370BA5 /* Assets.xcassets */; };
@@ -111,6 +112,7 @@
 		C1BC84B629430BED004BE287 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		C1BC84B829431754004BE287 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
 		C1BC84BA29434045004BE287 /* ListRowBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowBackground.swift; sourceTree = "<group>"; };
+		C1C23AF82945A25100E391F8 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		C1F691CD2942C3CB00370BA5 /* AiraloSampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiraloSampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F691D02942C3CB00370BA5 /* AiraloSampleProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiraloSampleProjectApp.swift; sourceTree = "<group>"; };
 		C1F691D22942C3CB00370BA5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -214,7 +216,7 @@
 				C1B2114F29444F2F0098AD9F /* Defines.swift */,
 				C1B2115329446AEE0098AD9F /* CacheAsyncImage.swift */,
 				C1B21155294486AB0098AD9F /* Item_Preview.swift */,
-				C1B211672944DD820098AD9F /* CardView.swift */,
+				C1C23AF72945A24300E391F8 /* CardView */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -238,6 +240,15 @@
 				C1BC849B294304B6004BE287 /* IBMPlexSans-ThinItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C1C23AF72945A24300E391F8 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				C1B211672944DD820098AD9F /* CardView.swift */,
+				C1C23AF82945A25100E391F8 /* CardViewModel.swift */,
+			);
+			path = CardView;
 			sourceTree = "<group>";
 		};
 		C1F691C42942C3CB00370BA5 = {
@@ -459,6 +470,7 @@
 				C1B2114E294440CE0098AD9F /* Composite.swift in Sources */,
 				C1B21156294486AB0098AD9F /* Item_Preview.swift in Sources */,
 				C1B2115A294489250098AD9F /* ESimListView.swift in Sources */,
+				C1C23AF92945A25100E391F8 /* CardViewModel.swift in Sources */,
 				C1BC849329430356004BE287 /* TabBarButton.swift in Sources */,
 				C1B2114629443A4B0098AD9F /* HttpMethod.swift in Sources */,
 				C1F691D32942C3CB00370BA5 /* MainView.swift in Sources */,

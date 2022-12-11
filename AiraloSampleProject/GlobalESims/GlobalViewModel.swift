@@ -9,6 +9,11 @@ import Foundation
 
 class GlobalViewModel: ObservableObject {
     @Published var packages: [GlobalPackage] = []
+    
+    convenience init(packages: [GlobalPackage]) {
+        self.init()
+        self.packages = packages
+    }
 }
 
 //struct GlobalESim {
@@ -22,7 +27,7 @@ struct Global: Decodable {
     var packages: [GlobalPackage]
 }
 
-struct GlobalPackage: Decodable, Identifiable {
+struct GlobalPackage:  Identifiable {
     
     var id: Int
     var data: String
@@ -30,10 +35,12 @@ struct GlobalPackage: Decodable, Identifiable {
     var price: Double
     var opperator: Operator
     
-    
     private enum CodingKeys : String, CodingKey {
         case id, data, validity, price, opperator = "operator", image
     }
+}
+
+extension GlobalPackage: Decodable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -50,6 +57,16 @@ struct GlobalPackage: Decodable, Identifiable {
     var color2: String {
         opperator.gradient_end
     }
+    
+    static func package_preview(id: Int) -> GlobalPackage {
+        GlobalPackage(
+            id: id,
+            data: "1 GB O",
+            validity: "7 Days 0",
+            price: 24,
+            opperator: Operator.operator_preview
+        )
+    }
 }
 
 struct Operator: Decodable {
@@ -57,4 +74,13 @@ struct Operator: Decodable {
     var gradient_start: String
     var gradient_end: String
     var image: RemoteImage
+    
+    static var operator_preview: Operator {
+        Operator(
+            title: "Discover Global O",
+            gradient_start: "#07053F",
+            gradient_end: "#0988A3",
+            image: RemoteImage.image_preview
+        )
+    }
 }

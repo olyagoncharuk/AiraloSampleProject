@@ -14,25 +14,27 @@ struct GlobalView: View {
     @ObservedObject var viewModel: GlobalViewModel
     
     var body: some View {
-        ScrollView {
-            ForEach(viewModel.packages) { package in
-                VStack {
-                    Text("Global for \(package.data)")
+        List {
+            Section {
+                ForEach(viewModel.packages) { package in
+                    CardView(viewModel: CardViewModel())
+                        .listRowBackground(Color.clear)
+                        .listRowSeparator(.hidden)
                 }
-                .frame(width: 335, height: 288)
-                .background(
-                    LinearGradient(gradient: Gradient(colors: [Color(hex: package.color1),
-                                                               Color(hex: package.color2)]),
-                                   startPoint: .leading, endPoint: .trailing)
-                    .cornerRadius(7)
-                )
-            }
-        }.padding(.top)
+            }//.background(.blue)
+        }
+        //.background(.red)
+        .listStyle(.plain)
     }
 }
 
 struct GlobalView_Previews: PreviewProvider {
     static var previews: some View {
-        GlobalView(viewModel: GlobalViewModel())
+        GlobalView(viewModel: GlobalViewModel(packages: packages_preview)).environmentObject(Style())
     }
 }
+
+var packages_preview = [
+    GlobalPackage.package_preview(id: 0),
+    GlobalPackage.package_preview(id: 1),
+    GlobalPackage.package_preview(id: 2)]
