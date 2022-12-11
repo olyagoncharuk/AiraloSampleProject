@@ -20,29 +20,37 @@ struct MainView: View {
     // MARK: - Body
     
     var body: some View {
-        VStack {
-            VStack(alignment: .leading) {
-                Text("Hello")
-                    .withFontColorStyle(style.helloStyling)
-                TopBarView(selectedTabIndex: $selectedTabIndex,
-                           tabs: tabs)
-                
-            }
-            
+        NavigationStack {
             VStack {
-                switch selectedTabIndex {
-                case .local:
-                    ESimListView(viewModel: viewModel.localViewModel)
-                case .regional:
-                    ESimListView(viewModel: viewModel.regionalViewModel)
-                case .global:
-                    GlobalView(viewModel: viewModel.globalViewModel)
+                VStack(alignment: .leading) {
+                    Text("Hello")
+                        .withFontColorStyle(style.helloStyling)
+                    TopBarView(selectedTabIndex: $selectedTabIndex,
+                               tabs: tabs)
+                    
                 }
+                
+                VStack {
+                    switch selectedTabIndex {
+                    case .local:
+                        ESimListView(viewModel: viewModel.localViewModel) { countryId in
+#warning("TODO: here should be viewModel from Composite")
+                            PackagesView(viewModel: PackagesViewModel())
+                        }
+                    case .regional:
+                        ESimListView(viewModel: viewModel.regionalViewModel) {
+                            regionId in
+                            PackagesView(viewModel: PackagesViewModel())
+                        }
+                    case .global:
+                        PackagesView(viewModel: viewModel.globalViewModel)
+                    }
+                }
+                Spacer()
             }
-            Spacer()
+            .environmentObject(style)
+            
         }
-        .environmentObject(style)
-        
     }
 }
 

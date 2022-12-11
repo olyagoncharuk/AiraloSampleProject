@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct GlobalView: View {
+struct PackagesView: View {
 //
     // MARK: - Properties
     
-    @ObservedObject var viewModel: GlobalViewModel
+    @ObservedObject var viewModel: PackagesViewModel
     
     // MARK: - Body
     
@@ -32,7 +32,7 @@ struct GlobalView: View {
 
 struct GlobalView_Previews: PreviewProvider {
     static var previews: some View {
-        GlobalView(viewModel: GlobalViewModel(packages: packages_preview)).environmentObject(Style())
+        PackagesView(viewModel: PackagesViewModel(packages: packages_preview)).environmentObject(Style())
     }
 }
 

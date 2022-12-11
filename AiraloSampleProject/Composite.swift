@@ -7,13 +7,31 @@
 
 import Foundation
 
+protocol CountryModelProvider {
+    func countryViewModel(for countryId: String) -> PackagesViewModel
+}
+    
+
 class Composite {
     
-    var localESimsRemoteService = RemoteService<[ESim], LocalESimRequestData>(requestValues: LocalESimRequestData())
-    var regionalESimsRemoteService = RemoteService<[ESim], RegionalESimRequestData>(requestValues: RegionalESimRequestData())
-    var globalESimsRemoteService = RemoteService<Global, GlobalESimRequestData>(requestValues: GlobalESimRequestData())
-    
     private var models = [String: AnyObject]()
+    private var remoteServices = [String: AnyObject]()
+    
+    private var localESimsRemoteService = RemoteService<[ESim], LocalESimRequestData>(requestValues: LocalESimRequestData())
+    private var regionalESimsRemoteService = RemoteService<[ESim], RegionalESimRequestData>(requestValues: RegionalESimRequestData())
+    private var globalESimsRemoteService = RemoteService<PackagesList, GlobalESimRequestData>(requestValues: GlobalESimRequestData())
+    
+    private func countryRemoteService(for countryId: String) -> RemoteService<PackagesList, CountryRequestData> {
+        let requestData = CountryRequestData(countryId: countryId)
+        return RemoteService(requestValues: requestData)
+    }
+    
+    // should be region
+    //    private func countryRemoteService(for slug: String) -> CountryRequestData {
+    //        CountryRequestData(countryId: slug)
+    //    }
+    //
+    
     
     func localViewModel() -> LocalViewModel<ESim> {
         if let model = models[SimTab.local.title] as? LocalViewModel<ESim> { return model }
@@ -39,12 +57,38 @@ class Composite {
         }
     }
     
-    func globalViewModel() -> GlobalViewModel {
-        if let model = models[SimTab.global.title] as? GlobalViewModel { return model }
+    func globalViewModel() -> PackagesViewModel {
+        if let model = models[SimTab.global.title] as? PackagesViewModel { return model }
         else {
-            let viewModel = GlobalViewModel()
-            globalESimsRemoteService.getItems { global in
-                viewModel.packages = global.packages
+            let viewModel = PackagesViewModel()
+            globalESimsRemoteService.getItems { packagesList in
+                viewModel.packages = packagesList.packages
+            }
+            models[SimTab.global.title] = viewModel
+            return viewModel
+        }
+    }
+    
+}
+
+extension Composite: CountryModelProvider {
+    
+    func countryViewModel(for countryId: String) -> PackagesViewModel {
+        if let model = models[countryId] as? PackagesViewModel { return model }
+        else {
+            let viewModel = PackagesViewModel()
+            var remoteService: RemoteService<PackagesList, CountryRequestData>? = nil
+            if let service = remoteServices[countryId] as? RemoteService<PackagesList, CountryRequestData> {
+                remoteService = service
+            } else {
+                remoteService = countryRemoteService(for: countryId)
+                remoteServices[countryId] = remoteService
+            }
+            
+            if let remoteService {
+                remoteService.getItems { packagesList in
+                    viewModel.packages = packagesList.packages
+                }
             }
             models[SimTab.global.title] = viewModel
             return viewModel

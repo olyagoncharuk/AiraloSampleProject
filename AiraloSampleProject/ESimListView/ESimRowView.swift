@@ -45,10 +45,7 @@ struct ESimRowView<Item>: View where Item: ESimDescribable {
                 .withFontColorStyle(style.esimRowTitleStyle)
                 .padding(.leading, 10)
             Spacer()
-            Image("arrow-right")
         }
-        .listRowBackground(ListRowBackground())
-        .listRowSeparator(.hidden)
         .frame(height: 55)
         .padding(.horizontal)
     }
@@ -59,6 +56,7 @@ struct ESimRowView_Previews: PreviewProvider {
         ESimRowView<Item_Preview>(
             item: Item_Preview(name: "Ukraine")
         )
+        .environmentObject(Style())
     }
 }
 

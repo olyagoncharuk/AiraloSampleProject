@@ -23,8 +23,8 @@
 		C1B211682944DD820098AD9F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B211672944DD820098AD9F /* CardView.swift */; };
 		C1BC848429430271004BE287 /* LocalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC848329430271004BE287 /* LocalViewModel.swift */; };
 		C1BC84892943029E004BE287 /* RegionalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC84882943029E004BE287 /* RegionalViewModel.swift */; };
-		C1BC848E294302C1004BE287 /* GlobalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC848D294302C1004BE287 /* GlobalViewModel.swift */; };
-		C1BC8490294302CC004BE287 /* GlobalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC848F294302CC004BE287 /* GlobalView.swift */; };
+		C1BC848E294302C1004BE287 /* PackagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC848D294302C1004BE287 /* PackagesViewModel.swift */; };
+		C1BC8490294302CC004BE287 /* PackagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC848F294302CC004BE287 /* PackagesView.swift */; };
 		C1BC849329430356004BE287 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC849229430356004BE287 /* TabBarButton.swift */; };
 		C1BC84A3294304B6004BE287 /* IBMPlexSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1BC8495294304B6004BE287 /* IBMPlexSans-Thin.ttf */; };
 		C1BC84A4294304B6004BE287 /* IBMPlexSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1BC8496294304B6004BE287 /* IBMPlexSans-SemiBoldItalic.ttf */; };
@@ -91,8 +91,8 @@
 		C1B211672944DD820098AD9F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C1BC848329430271004BE287 /* LocalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalViewModel.swift; sourceTree = "<group>"; };
 		C1BC84882943029E004BE287 /* RegionalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionalViewModel.swift; sourceTree = "<group>"; };
-		C1BC848D294302C1004BE287 /* GlobalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalViewModel.swift; sourceTree = "<group>"; };
-		C1BC848F294302CC004BE287 /* GlobalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalView.swift; sourceTree = "<group>"; };
+		C1BC848D294302C1004BE287 /* PackagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesViewModel.swift; sourceTree = "<group>"; };
+		C1BC848F294302CC004BE287 /* PackagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesView.swift; sourceTree = "<group>"; };
 		C1BC849229430356004BE287 /* TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
 		C1BC8495294304B6004BE287 /* IBMPlexSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Thin.ttf"; sourceTree = "<group>"; };
 		C1BC8496294304B6004BE287 /* IBMPlexSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -205,8 +205,8 @@
 		C1BC848C294302AE004BE287 /* GlobalESims */ = {
 			isa = PBXGroup;
 			children = (
-				C1BC848D294302C1004BE287 /* GlobalViewModel.swift */,
-				C1BC848F294302CC004BE287 /* GlobalView.swift */,
+				C1BC848D294302C1004BE287 /* PackagesViewModel.swift */,
+				C1BC848F294302CC004BE287 /* PackagesView.swift */,
 			);
 			path = GlobalESims;
 			sourceTree = "<group>";
@@ -470,7 +470,7 @@
 			files = (
 				C1BC84B3294308B8004BE287 /* Styling.swift in Sources */,
 				C1BC84892943029E004BE287 /* RegionalViewModel.swift in Sources */,
-				C1BC8490294302CC004BE287 /* GlobalView.swift in Sources */,
+				C1BC8490294302CC004BE287 /* PackagesView.swift in Sources */,
 				C1BC848429430271004BE287 /* LocalViewModel.swift in Sources */,
 				C1B211662944AFE00098AD9F /* GlobalRequestData.swift in Sources */,
 				C1B2114E294440CE0098AD9F /* Composite.swift in Sources */,
@@ -481,7 +481,7 @@
 				C1B2114629443A4B0098AD9F /* HttpMethod.swift in Sources */,
 				C1F691D32942C3CB00370BA5 /* MainView.swift in Sources */,
 				C1BC84B929431754004BE287 /* TopBarView.swift in Sources */,
-				C1BC848E294302C1004BE287 /* GlobalViewModel.swift in Sources */,
+				C1BC848E294302C1004BE287 /* PackagesViewModel.swift in Sources */,
 				C1B2114829443A6C0098AD9F /* RemoteService.swift in Sources */,
 				C1BC84B529430975004BE287 /* Extensions.swift in Sources */,
 				C1B2116229448B7E0098AD9F /* LocalRequestData.swift in Sources */,

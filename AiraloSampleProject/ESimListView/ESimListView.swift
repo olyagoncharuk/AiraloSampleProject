@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ESimListView<Item, VM>: View where Item: ESimDescribable, VM: ViewModel, Item == VM.Item  {
+struct ESimListView<Item, VM, ChildView: View>: View where Item: ESimDescribable, VM: ViewModel, Item == VM.Item  {
     
     // MARK: - Properties
     
@@ -15,31 +15,41 @@ struct ESimListView<Item, VM>: View where Item: ESimDescribable, VM: ViewModel, 
     
     @EnvironmentObject var style: Style
     
+    @ViewBuilder var builder: (String) -> ChildView
+    
     // MARK: - Body
     
     var body: some View {
-        VStack(alignment: .leading) {
-            List {
-                Section {
-                    ForEach(viewModel.items) { item in
-                        ESimRowView(item: item)
+        NavigationStack {
+            VStack(alignment: .leading) {
+                List {
+                    Section {
+                        ForEach(viewModel.items) { item in
+                                NavigationLink(destination: builder(item.description)) {
+                                    ESimRowView(item: item)
+                                }
+                                .listRowBackground(ListRowBackground())
+                                .listRowSeparator(.hidden)
+                                .listRowInsets(EdgeInsets(top: 8, leading: 20, bottom: 8, trailing: 40))
+                        }
+                    } header: {
+                        Text(viewModel.description)
+                            .withFontColorStyle(style.tabViewTitleStyle)
                     }
-                } header: {
-                    Text(viewModel.description)
-                        .withFontColorStyle(style.tabViewTitleStyle)
+                    .headerProminence(.increased)
                 }
-                
-                .headerProminence(.increased)
+                .listStyle(.plain)
             }
-            .listStyle(.plain)
         }
     }
 }
 
 struct ESimListView_Previews: PreviewProvider {
     static var previews: some View {
-        ESimListView(viewModel: LocalViewModel(items: preview_items))
-            .environmentObject(Style())
+        ESimListView(viewModel: LocalViewModel(items: preview_items)) { slug in
+            PackagesView(viewModel: PackagesViewModel(packages: packages_preview))
+        }
+        .environmentObject(Style())
     }
 }
 

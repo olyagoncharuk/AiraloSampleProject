@@ -16,5 +16,6 @@ protocol ItemsOwner<Item> {
     var items: [Item] { get set }
 }
 
+
 protocol ViewModel: ObservableObject, CustomStringConvertible, ItemsOwner {}
 

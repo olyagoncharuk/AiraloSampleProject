@@ -1,5 +1,5 @@
 //
-//  RegionalViewModel.swift
+//  PackagesViewModel.swift
 //  AiraloSampleProject
 //
 //  Created by zombie zyomka on 09.12.2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class GlobalViewModel: ObservableObject {
+class PackagesViewModel: ObservableObject {
     
     // MARK: - Properties
     
@@ -44,8 +44,7 @@ class GlobalViewModel: ObservableObject {
     }
 }
 
-struct Global: Decodable {
+struct PackagesList: Decodable {
     var id: Int
     var packages: [Package]
 }
-
