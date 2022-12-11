@@ -13,18 +13,20 @@ struct GlobalView: View {
     
     @ObservedObject var viewModel: GlobalViewModel
     
+    // MARK: - Body
+    
     var body: some View {
         List {
             Section {
                 ForEach(viewModel.packages) { package in
-                    CardView(viewModel: CardViewModel())
+                    CardView(viewModel: viewModel.viewModel(for: package))
                         .listRowBackground(Color.clear)
                         .listRowSeparator(.hidden)
                 }
-            }//.background(.blue)
+            }
         }
-        //.background(.red)
         .listStyle(.plain)
+        
     }
 }
 
@@ -35,6 +37,6 @@ struct GlobalView_Previews: PreviewProvider {
 }
 
 var packages_preview = [
-    GlobalPackage.package_preview(id: 0),
-    GlobalPackage.package_preview(id: 1),
-    GlobalPackage.package_preview(id: 2)]
+    Package.package_preview(id: 0),
+    Package.package_preview(id: 1),
+    Package.package_preview(id: 2)]

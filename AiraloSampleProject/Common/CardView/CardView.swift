@@ -15,21 +15,26 @@ struct CardView: View {
     
     var body: some View {
         ZStack(alignment: .top) {
-            CardBackgroundView()
+            CardBackgroundView(
+                gradientColor1: viewModel.gradientColor1,
+                gradientColor2: viewModel.gradientColor2
+            )
             VStack(alignment: .center) {
                 VStack(alignment: .leading) {
-                    TopView()
+                    TopView(
+                        title: viewModel.title,
+                        subTitle: viewModel.subtitle)
                     ValueRowDivider()
                     ValueRow(
                         imageName: "arrows-up-down",
                         title: "DATA",
-                        valueText: "1 GB"
+                        valueText: viewModel.dataValue
                     ).padding(.vertical, 10)
                     ValueRowDivider()
                     ValueRow(
                         imageName: "calendar",
                         title: "VALIDITY",
-                        valueText: "7 Days"
+                        valueText: viewModel.validityValue
                     ).padding(.vertical, 10)
                     ValueRowDivider()
                     
@@ -38,29 +43,62 @@ struct CardView: View {
 
                 BuyButton(title: viewModel.buyTitle)
             }
-            Image("card-small")
-                .offset(x: 80, y: -40)
+            CacheAsyncImage(
+                url: viewModel.imageURL
+            ) { phase in
+                switch phase {
+                case .success(let image):
+                    HStack {
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 140, height: 88)
+                            
+                    }
+                case .failure(_):
+                    Color.clear
+                case .empty:
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle(tint: .gray.opacity(0.3)))
+                @unknown default:
+                    Color.clear
+                }
+            }
+            .offset(x: 80, y: -20)
         }
-        .frame(width: 335, height: 336)
+        .frame(width: 335, height: 330)
         .padding(.horizontal)
     }
 }
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(viewModel: CardViewModel())
+        CardView(
+            viewModel: CardViewModel.model_preview
+        )
             .environmentObject(Style())
     }
 }
 
 fileprivate struct CardBackgroundView: View {
+    
+    // MARK: - Properties
+    
+    var gradientColor1: String //"#07053F"
+    
+    var gradientColor2: String //"#0988A3"
+    
+    // MARK: - Body
+    
     var body: some View {
         VStack {
         }
         .frame(width: 335, height: 308)
         .background(
-            LinearGradient(gradient: Gradient(colors: [Color(hex: "#07053F"),
-                                                       Color(hex: "#0988A3")]),
+            LinearGradient(
+                gradient: Gradient(
+                    colors: [Color(hex: gradientColor1),
+                             Color(hex: gradientColor2)]),
                            startPoint: .leading, endPoint: .trailing)
             .cornerRadius(7)
         )
@@ -72,17 +110,21 @@ fileprivate struct TopView: View {
     
     // MARK: - Properties
     
+    var title: String
+    
+    var subTitle: String
+    
     @EnvironmentObject var style: Style
     
     // MARK: - Body
     
     var body: some View {
-        Text("Discover Global")
+        Text(title)
             .withFontColorStyle(style.cardTitleStyle)
             .padding(.top)
         
         HStack {
-            Text("87 Countries")
+            Text(subTitle)
                 .withFontColorStyle(style.cardSubtitleStyle)
                
             Image(systemName: "arrow.right.circle.fill")
