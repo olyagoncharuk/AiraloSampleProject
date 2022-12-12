@@ -16,6 +16,7 @@ protocol ItemsOwner<Item> {
     associatedtype Item
     var items: [Item] { get set }
     var errorDescription: String { get set }
+    var retryAction: (() -> Void)? { get set }
 }
 
 

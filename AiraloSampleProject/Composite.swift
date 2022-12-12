@@ -44,7 +44,8 @@ class Composite: ObservableObject {
         if let model = models[SimTab.local.title] as? LocalViewModel<ESim> { return model }
         else {
             let viewModel = LocalViewModel<ESim>()
-            localESimsRemoteService.getItems { [weak self] result in
+            
+            let getItemsResult: (RemoteServiceResult<[ESim]>) -> Void = { [weak self] result in
                 switch result {
                 case .success(let esims):
                     viewModel.items = esims
@@ -55,6 +56,12 @@ class Composite: ObservableObject {
                 }
             }
             
+            localESimsRemoteService.getItems(completion: getItemsResult)
+            
+            viewModel.retryAction = { [weak self] in
+                self?.localESimsRemoteService.getItems(completion: getItemsResult)
+            }
+            
             return viewModel
         }
     }
@@ -63,7 +70,8 @@ class Composite: ObservableObject {
         if let model = models[SimTab.regional.title] as? RegionalViewModel<ESim> { return model }
         else {
             let viewModel = RegionalViewModel<ESim>()
-            regionalESimsRemoteService.getItems { [weak self] result in
+            
+            let getItemsResult: (RemoteServiceResult<[ESim]>) -> Void = { [weak self] result in
                 switch result {
                 case .success(let esims):
                     viewModel.items = esims
@@ -72,6 +80,12 @@ class Composite: ObservableObject {
                 case .failure(let error):
                     viewModel.errorDescription = error.localizedDescription
                 }
+            }
+            
+            regionalESimsRemoteService.getItems(completion: getItemsResult)
+            
+            viewModel.retryAction = { [weak self] in
+                self?.regionalESimsRemoteService.getItems(completion: getItemsResult)
             }
             
             return viewModel

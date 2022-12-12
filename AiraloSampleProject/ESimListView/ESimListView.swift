@@ -25,7 +25,21 @@ struct ESimListView<Item, VM, ChildView: View>: View where Item: ESimDescribable
                 Text(viewModel.errorDescription)
                     .withFontColorStyle(style.errorStyle)
                     .multilineTextAlignment(.center)
-                    .frame(width: 200)
+                    .frame(width: 300)
+                    .padding(.top)
+                Text("Please, make sure you are online and tap Retry")
+                    .withFontColorStyle(style.errorStyle)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 300)
+                    .padding(.bottom)
+                Button {
+                    if let retry = viewModel.retryAction {
+                        retry()
+                    }
+                } label: {
+                    Text("Retry")
+                }
+                .buttonStyle(.borderedProminent)
             }
         } else {
             NavigationStack {
@@ -61,5 +75,7 @@ struct ESimListView_Previews: PreviewProvider {
         .environmentObject(Style())
     }
 }
+
+
 
 

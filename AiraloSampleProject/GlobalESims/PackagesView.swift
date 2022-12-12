@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct PackagesView: View {
-//
+    
+    @EnvironmentObject var style: Style
+    
     // MARK: - Properties
     
     @ObservedObject var viewModel: PackagesViewModel
@@ -16,23 +18,47 @@ struct PackagesView: View {
     // MARK: - Body
     
     var body: some View {
-        List {
-            Section {
-                ForEach(viewModel.packages) { package in
-                    CardView(viewModel: viewModel.viewModel(for: package))
-                        .listRowBackground(Color.clear)
-                        .listRowSeparator(.hidden)
+        if !viewModel.errorDescription.isEmpty {
+            VStack(alignment: .center) {
+                Text(viewModel.errorDescription)
+                    .withFontColorStyle(style.errorStyle)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 300)
+                    .padding(.top)
+                Text("Please, make sure you are online and tap Retry")
+                    .withFontColorStyle(style.errorStyle)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 300)
+                    .padding(.bottom)
+                Button {
+                    if let retry = viewModel.retryAction {
+                        retry()
+                    }
+                } label: {
+                    Text("Retry")
+                }
+                .buttonStyle(.borderedProminent)
+            }
+        } else {
+            List {
+                Section {
+                    ForEach(viewModel.packages) { package in
+                        CardView(viewModel: viewModel.viewModel(for: package))
+                            .listRowBackground(Color.clear)
+                            .listRowSeparator(.hidden)
+                    }
                 }
             }
+            .listStyle(.plain)
         }
-        .listStyle(.plain)
         
     }
 }
 
 struct GlobalView_Previews: PreviewProvider {
     static var previews: some View {
-        PackagesView(viewModel: PackagesViewModel(packages: packages_preview)).environmentObject(Style())
+        PackagesView(viewModel: PackagesViewModel(packages: packages_preview))
+            .environmentObject(Style())
     }
 }
 

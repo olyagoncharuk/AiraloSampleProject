@@ -15,6 +15,8 @@ class RegionalViewModel<Item>: ViewModel {
     
     @Published var errorDescription: String = ""
     
+    var retryAction: (() -> Void)?
+    
     var headerTitle: String = "Regions"
     
     var description: String {

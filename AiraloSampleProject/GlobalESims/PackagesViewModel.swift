@@ -15,6 +15,8 @@ class PackagesViewModel: ObservableObject {
     
     @Published var errorDescription: String = ""
     
+    var retryAction: (() -> Void)?
+    
     // MARK: - Initialization
     
     convenience init(packages: [Package]) {

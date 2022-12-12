@@ -21,6 +21,7 @@
 		C1B2116429448B960098AD9F /* RegionRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2116329448B960098AD9F /* RegionRequestData.swift */; };
 		C1B211662944AFE00098AD9F /* GlobalRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B211652944AFE00098AD9F /* GlobalRequestData.swift */; };
 		C1B211682944DD820098AD9F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B211672944DD820098AD9F /* CardView.swift */; };
+		C1B4442C29470FFF00A642D9 /* NoConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B4442B29470FFF00A642D9 /* NoConnectionView.swift */; };
 		C1BC848429430271004BE287 /* LocalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC848329430271004BE287 /* LocalViewModel.swift */; };
 		C1BC84892943029E004BE287 /* RegionalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC84882943029E004BE287 /* RegionalViewModel.swift */; };
 		C1BC848E294302C1004BE287 /* PackagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC848D294302C1004BE287 /* PackagesViewModel.swift */; };
@@ -89,6 +90,7 @@
 		C1B2116329448B960098AD9F /* RegionRequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionRequestData.swift; sourceTree = "<group>"; };
 		C1B211652944AFE00098AD9F /* GlobalRequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalRequestData.swift; sourceTree = "<group>"; };
 		C1B211672944DD820098AD9F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C1B4442B29470FFF00A642D9 /* NoConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnectionView.swift; sourceTree = "<group>"; };
 		C1BC848329430271004BE287 /* LocalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalViewModel.swift; sourceTree = "<group>"; };
 		C1BC84882943029E004BE287 /* RegionalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionalViewModel.swift; sourceTree = "<group>"; };
 		C1BC848D294302C1004BE287 /* PackagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesViewModel.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				C1B2114F29444F2F0098AD9F /* Defines.swift */,
 				C1B2115329446AEE0098AD9F /* CacheAsyncImage.swift */,
 				C1B21155294486AB0098AD9F /* Item_Preview.swift */,
+				C1B4442B29470FFF00A642D9 /* NoConnectionView.swift */,
 				C1C23AF72945A24300E391F8 /* CardView */,
 			);
 			path = Common;
@@ -471,6 +474,7 @@
 				C1BC84B3294308B8004BE287 /* Styling.swift in Sources */,
 				C1BC84892943029E004BE287 /* RegionalViewModel.swift in Sources */,
 				C1BC8490294302CC004BE287 /* PackagesView.swift in Sources */,
+				C1B4442C29470FFF00A642D9 /* NoConnectionView.swift in Sources */,
 				C1BC848429430271004BE287 /* LocalViewModel.swift in Sources */,
 				C1B211662944AFE00098AD9F /* GlobalRequestData.swift in Sources */,
 				C1B2114E294440CE0098AD9F /* Composite.swift in Sources */,

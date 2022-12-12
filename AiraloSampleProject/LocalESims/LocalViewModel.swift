@@ -15,6 +15,8 @@ class LocalViewModel<Item>: ViewModel {
     
     @Published var errorDescription: String = ""
     
+    var retryAction: (() -> Void )?
+    
     var headerTitle: String = "Popular Countries"
     
     var description: String {
@@ -26,5 +28,11 @@ class LocalViewModel<Item>: ViewModel {
     convenience init(items: [Item]) {
         self.init()
         self.items = items
+    }
+    
+    func retry() {
+        if let retryAction {
+            retryAction()
+        }
     }
 }
