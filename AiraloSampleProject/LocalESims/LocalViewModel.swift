@@ -13,6 +13,8 @@ class LocalViewModel<Item>: ViewModel {
    
     @Published var items: [Item] = []
     
+    @Published var errorDescription: String = ""
+    
     var headerTitle: String = "Popular Countries"
     
     var description: String {

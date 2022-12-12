@@ -65,6 +65,11 @@ final class ValueStyle: FontStyling {
     var font = Font.custom("IBMPlexSans-Medium", size: 17)
 }
 
+final class ErrorStyle: FontStyling {
+    var color = Color.red
+    var font = Font.custom("IBMPlexSans-Medium", size: 20)
+}
+
 
 
 class Style: ObservableObject {
@@ -77,4 +82,5 @@ class Style: ObservableObject {
     let cardSubtitleStyle = CardSubtitleStyle()
     let uppercaseStyle = UppercaseStyle()
     let valueStyle = ValueStyle()
+    let errorStyle = ErrorStyle()
 }

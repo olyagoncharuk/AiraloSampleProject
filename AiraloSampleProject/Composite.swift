@@ -7,10 +7,13 @@
 
 import Foundation 
 
-class Composite {
+class Composite: ObservableObject {
+    
+    // MARK: - Properties
     
     private var models = [String: AnyObject]()
     private var remoteServices = [String: AnyObject]()
+
     
     private var localESimsRemoteService = RemoteService<[ESim], LocalESimRequestData>(requestValues: LocalESimRequestData())
     private var regionalESimsRemoteService = RemoteService<[ESim], RegionalESimRequestData>(requestValues: RegionalESimRequestData())
@@ -26,44 +29,75 @@ class Composite {
         return RemoteService(requestValues: requestData)
     }
     
+    private func save(model: AnyObject, forKey key: String) {
+        models[key] = model
+    }
     
-    func localViewModel() -> LocalViewModel<ESim> {
+    private func save(service: AnyObject, forKey key: String) {
+        remoteServices[key] = service
+    }
+    
+    
+    // MARK: - Public Interface
+    
+    public func localViewModel() -> LocalViewModel<ESim> {
         if let model = models[SimTab.local.title] as? LocalViewModel<ESim> { return model }
         else {
             let viewModel = LocalViewModel<ESim>()
-            localESimsRemoteService.getItems { esims in
-                viewModel.items = esims
+            localESimsRemoteService.getItems { [weak self] result in
+                switch result {
+                case .success(let esims):
+                    viewModel.items = esims
+                    viewModel.errorDescription = ""
+                    self?.save(model: viewModel, forKey: SimTab.local.title)
+                case .failure(let error):
+                    viewModel.errorDescription = error.localizedDescription
+                }
             }
-            models[SimTab.local.title] = viewModel
+            
             return viewModel
         }
     }
     
-    func regionalViewModel() -> RegionalViewModel<ESim> {
+    public func regionalViewModel() -> RegionalViewModel<ESim> {
         if let model = models[SimTab.regional.title] as? RegionalViewModel<ESim> { return model }
         else {
             let viewModel = RegionalViewModel<ESim>()
-            regionalESimsRemoteService.getItems { esims in
-                viewModel.items = esims
+            regionalESimsRemoteService.getItems { [weak self] result in
+                switch result {
+                case .success(let esims):
+                    viewModel.items = esims
+                    viewModel.errorDescription = ""
+                    self?.save(model: viewModel, forKey: SimTab.regional.title)
+                case .failure(let error):
+                    viewModel.errorDescription = error.localizedDescription
+                }
             }
-            models[SimTab.regional.title] = viewModel
+            
             return viewModel
         }
     }
     
-    func globalViewModel() -> PackagesViewModel {
+    public func globalViewModel() -> PackagesViewModel {
         if let model = models[SimTab.global.title] as? PackagesViewModel { return model }
         else {
             let viewModel = PackagesViewModel()
-            globalESimsRemoteService.getItems { packagesList in
-                viewModel.packages = packagesList.packages
+            globalESimsRemoteService.getItems { [weak self] result in
+                switch result {
+                case .success(let packagesList):
+                    viewModel.packages = packagesList.packages
+                    viewModel.errorDescription = ""
+                    self?.save(model: viewModel, forKey: SimTab.global.title)
+                case .failure(let error):
+                    viewModel.errorDescription = error.localizedDescription
+                }
             }
-            models[SimTab.global.title] = viewModel
+            
             return viewModel
         }
     }
     
-    func countryViewModel(for countryId: String) -> PackagesViewModel {
+    public func countryViewModel(for countryId: String) -> PackagesViewModel {
         let modelKey = "countryKey_" + countryId
         if let model = models[modelKey] as? PackagesViewModel { return model }
         else {
@@ -77,16 +111,23 @@ class Composite {
             }
             
             if let remoteService {
-                remoteService.getItems { packagesList in
-                    viewModel.packages = packagesList.packages
+                remoteService.getItems { [weak self] result in
+                    switch result {
+                    case .success(let packagesList):
+                        viewModel.packages = packagesList.packages
+                        viewModel.errorDescription = ""
+                        self?.save(model: viewModel, forKey: modelKey)
+                    case .failure(let error):
+                        viewModel.errorDescription = error.localizedDescription
+                    }
                 }
             }
-            models[modelKey] = viewModel
+            
             return viewModel
         }
     }
     
-    func regionViewModel(for regionId: String) -> PackagesViewModel {
+    public func regionViewModel(for regionId: String) -> PackagesViewModel {
         let modelKey = "regionKey_" + regionId
         if let model = models[modelKey] as? PackagesViewModel { return model }
         else {
@@ -100,11 +141,18 @@ class Composite {
             }
             
             if let remoteService {
-                remoteService.getItems { packagesList in
-                    viewModel.packages = packagesList.packages
+                remoteService.getItems { [weak self] result in
+                    switch result {
+                    case .success(let packagesList):
+                        viewModel.packages = packagesList.packages
+                        viewModel.errorDescription = ""
+                        self?.save(model: viewModel, forKey: modelKey)
+                    case .failure(let error):
+                        viewModel.errorDescription = error.localizedDescription
+                    }
                 }
             }
-            models[modelKey] = viewModel
+            
             return viewModel
         }
     }

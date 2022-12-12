@@ -9,7 +9,9 @@ import SwiftUI
 
 @main
 struct AiraloSampleProjectApp: App {
+    
     let composite = Composite()
+    
     var body: some Scene {
         WindowGroup {
             MainView(viewModel: MainViewModel(composite: composite))

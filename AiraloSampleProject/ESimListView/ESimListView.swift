@@ -20,25 +20,34 @@ struct ESimListView<Item, VM, ChildView: View>: View where Item: ESimDescribable
     // MARK: - Body
     
     var body: some View {
-        NavigationStack {
-            VStack(alignment: .leading) {
-                List {
-                    Section {
-                        ForEach(viewModel.items) { item in
+        if !viewModel.errorDescription.isEmpty {
+            VStack(alignment: .center) {
+                Text(viewModel.errorDescription)
+                    .withFontColorStyle(style.errorStyle)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 200)
+            }
+        } else {
+            NavigationStack {
+                VStack(alignment: .leading) {
+                    List {
+                        Section {
+                            ForEach(viewModel.items) { item in
                                 NavigationLink(destination: builder(item.slug)) {
                                     ESimRowView(item: item)
                                 }
                                 .listRowBackground(ListRowBackground())
                                 .listRowSeparator(.hidden)
                                 .listRowInsets(EdgeInsets(top: 8, leading: 20, bottom: 8, trailing: 40))
+                            }
+                        } header: {
+                            Text(viewModel.description)
+                                .withFontColorStyle(style.tabViewTitleStyle)
                         }
-                    } header: {
-                        Text(viewModel.description)
-                            .withFontColorStyle(style.tabViewTitleStyle)
+                        .headerProminence(.increased)
                     }
-                    .headerProminence(.increased)
+                    .listStyle(.plain)
                 }
-                .listStyle(.plain)
             }
         }
     }

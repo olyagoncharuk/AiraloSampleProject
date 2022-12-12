@@ -15,6 +15,7 @@ protocol ESimDescribable: Identifiable, CustomStringConvertible {
 protocol ItemsOwner<Item> {
     associatedtype Item
     var items: [Item] { get set }
+    var errorDescription: String { get set }
 }
 
 

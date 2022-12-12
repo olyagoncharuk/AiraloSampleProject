@@ -27,7 +27,6 @@ struct MainView: View {
                         .withFontColorStyle(style.helloStyling)
                     TopBarView(selectedTabIndex: $selectedTabIndex,
                                tabs: tabs)
-                    
                 }
                 
                 VStack {
@@ -58,6 +57,8 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(viewModel: MainViewModel(composite: Composite()))
+        MainView(viewModel: MainViewModel(composite: composite_preview))
     }
 }
+
+var composite_preview = Composite()

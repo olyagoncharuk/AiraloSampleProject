@@ -13,6 +13,8 @@ class PackagesViewModel: ObservableObject {
     
     @Published var packages: [Package] = []
     
+    @Published var errorDescription: String = ""
+    
     // MARK: - Initialization
     
     convenience init(packages: [Package]) {

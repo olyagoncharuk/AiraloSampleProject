@@ -8,10 +8,12 @@
 import Foundation
 
 class RegionalViewModel<Item>: ViewModel {
-    
+   
     // MARK: - Properties
     
     @Published var items: [Item] = [Item]()
+    
+    @Published var errorDescription: String = ""
     
     var headerTitle: String = "Regions"
     
